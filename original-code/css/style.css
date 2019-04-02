@@ -1,0 +1,411 @@
+/* STRUCTURAL ELEMENTS */
+html {
+  scroll-behavior: smooth;
+}
+
+BODY {
+  font-family: 'PT Serif', serif;
+  background-color: #161414;
+  color: white;
+}
+
+.container {
+  text-align:center;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.hero-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.toc-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width:200px;
+  margin:10px;
+  padding:0px;
+}
+
+.toc-text{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+  font-size:.85em;
+  color:#000;
+  width:100%;
+  min-height:50px;
+  opacity:.7;
+  background-color: #fff;
+  padding:5px;
+}
+
+.embed-container {
+  width:100%;
+  padding: 25px;
+}
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+  background: #161414;
+  height:100px;
+  min-height: 100px;
+  padding-top:25px;
+  margin-top:100px;
+  display: block;
+  margin-left: 680px;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+/* LINK STYLES */
+
+a:link {
+  color:#049AFF;
+    text-decoration:none;
+}
+
+a:hover {
+  color:#42E8D7;
+  text-decoration:underline;
+}
+
+a:visited {
+  color:#29BBE8;
+  text-decoration:none;
+}
+
+a:active {
+  color:#44FFCA;
+  text-decoration:none;
+}
+
+a:link.toc-link {color:#000;}
+
+a:visited.toc-link {color:#000;}
+
+
+
+/* IMAGES */
+
+.hero-image{
+    width:100%;
+}
+
+.tinted-image {
+  background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)
+    ),
+    /* bottom, image */
+    url(ice.png);
+}
+
+.stack-image {
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  padding-top:30px;
+}
+
+.toc-image {
+  width:250px;
+}
+
+
+/* TYPOGRAPHY */
+
+.hero-text{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight:bold;
+  font-family: 'PT Serif', serif;
+  font-size:7em;
+}
+
+
+.hed {
+  font-size:3em;
+  font-family: 'Poppins', sans-serif;
+}
+
+p{
+  text-align:left;
+  line-height:180%;
+}
+
+.byline {
+  font-size:1em;
+  margin-top:-10px;
+  font-family: 'Poppins', sans-serif;
+  color: #94B8E0;
+}
+
+.home {
+  font-size:1em;
+  margin-top:-10px;
+  font-family: 'Poppins', sans-serif;
+  text-align:left;
+  text-transform: uppercase;
+  color: #94B8E0;
+}
+
+.chapter {
+  font-size:1em;
+  margin-top:-10px;
+  font-family: 'Poppins', sans-serif;
+  text-align:right;
+  text-transform: uppercase;
+}
+
+.intro-text {
+  font-family: 'Poppins', sans-serif;
+  font-size:1.25em;
+  width: 100%;
+  padding-top:25px;
+  padding-bottom:25px;
+}
+
+.chapter-head {
+  font-size:2em;
+  font-family: 'Poppins', sans-serif;
+  padding-top:20px;
+  text-transform: uppercase;
+  color: #94B8E0;
+}
+
+.small-head {
+  font-size:1.5em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-head {
+  font-size:1.5em;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.caption {
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  padding-bottom:30px;
+  font-family: 'Poppins', sans-serif;
+  color:#94B8E0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.line {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.quote {
+  font-family: 'Poppins', sans-serif;
+  font-size:1.7em;
+  text-align: left;
+  padding: 0px 200px 0px 200px;
+  color: #94B8E0;
+  margin-top: -10.5em;
+  margin-bottom: -4.1em;
+}
+
+.quote-mark {
+  color: #94B8E0;
+  font-size: 16em;
+  font-family: 'Poppins', sans-serif;
+  padding: 0px 620px 0px 0px;
+}
+
+.quote-mark2 {
+  color: #94B8E0;
+  font-size: 16em;
+  font-family: 'Poppins', sans-serif;
+  padding: 0px 0px 50px 500px;
+}
+
+.quote-attribution {
+  font-family: 'Poppins', sans-serif;
+  font-size:1em;
+  color:#94B8E0;
+  margin-top: -13em;
+  padding: 0px 0px 0px 400px;
+}
+
+
+.dropcap {
+  color: #049AFF;
+  float: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 4em;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-weight: 700;
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:550px) {
+  p {
+    padding-left:20px;
+    padding-right:10px;
+  }
+
+  .hero-text{
+    font-size:2em;
+    top:50%;
+  }
+
+  .intro-text {
+    font-size:1em;
+  }
+
+  .chapter-head {
+    font-size:1.25em;
+  }
+
+  .hed {
+    font-size:2em;
+  }
+
+  .quote {
+    font-size:1em;
+  }
+
+}
+
+/* Table of Contents */
+
+.small-head {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.lowercase {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: .8em;
+}
+
+.column {
+  flex: 50%;
+  margin-right:-10em;
+}
+.row {
+  display:flex;
+  margin-left: 10em;
+}
+
+.row2 {
+  display:flex;
+  margin-left: 10em;
+}
+
+.row3 {
+  display:flex;
+  margin-left: 10em;
+}
+
+.text {
+  font-family: 'PT Serif', serif;
+  float:left;
+  margin-left:-320px;
+  margin-right: 300px;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  float:left;
+  font-size: 1.3em;
+  margin-left:-320px;
+}
+
+.health {
+  margin-left:-331px;
+}
+
+.healthtext {
+  margin-left:-331px;
+  font-family: 'PT Serif', serif;
+  float:left;
+  margin-right: 300px;
+}
+
+b {
+  color:#94B8E0;
+}
+
+/* Twitter and Facebook icon styles =========== */
+
+.icon-twitter, .icon-facebook {
+  margin-right:10px;
+  font-size:2em;
+  color:#94B8E0;
+  cursor: pointer;
+
+}
+
+.icon-twitter:hover, .icon-facebook:hover {
+  color:#cdcdcd;
+
+}
+
+
+@font-face {
+  font-family: 'icons';
+  src:url('../icons/icons.eot?fylnot');
+  src:url('../icons/icons.eot?#iefixfylnot') format('embedded-opentype'),
+    url('../icons/icons.woff?fylnot') format('woff'),
+    url('../icons/icons.ttf?fylnot') format('truetype'),
+    url('../icons/icons.svg?fylnot#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-twitter:before {
+  content: "\e621";
+}
+.icon-facebook:before {
+  content: "\e620";
+}
