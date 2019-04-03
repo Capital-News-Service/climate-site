@@ -1,0 +1,281 @@
+<!-- This is a simple template for progressing through a series of divs on click -->
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+
+  <title>Div progression template</title>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<style>
+
+	#graphic-container {
+		margin-top:70px;
+		background: #181818;
+    font-family: 'Montserrat', sans-serif;
+		height: 400px;
+		text-align: left;
+		padding-top: 30px;
+
+	}
+
+.title {
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:2em;
+  color: #94b8e0;
+}
+
+.title-intro {
+  text-transform:uppercase;
+  font-size:2em;
+  color: #94b8e0;
+}
+
+.white-bold {
+    color: #fff;
+    font-weight:bold;
+}
+
+	.block {
+		width:90%;
+		max-width: 600px;
+		color:#fff;
+		margin:0 auto;
+	}
+
+  .chatter {
+    line-height:140%;
+  }
+
+	.next-div {display:none;}
+
+	#block2 {
+		text-align: left;
+	}
+
+
+	.button {
+		width:200px !important;
+		height:30px !important;
+		padding-top:10px !important;
+		background: #94b8e0;
+		cursor: pointer !important;
+		margin:0 auto !important;
+		text-align: center !important;
+	}
+
+
+	.button:hover {
+    background:#fff !important;
+    color: #94b8e0 !important;
+  }
+
+	.child1, .child2, .child3, .child4, .child5 {display:none;}
+
+  .icon {
+    width: 35px;
+    padding-right: 10px;
+  }
+
+	</style>
+
+
+
+
+</head>
+<body>
+
+	<div id="graphic-container">
+
+
+<!-- BLOCK 0 -->
+
+		<div id="block1" class="block">
+			<p class="title-intro">HOW <span class="white-bold">COLD WEATHER</span> AFFECTS HEALTH</p>
+      <p class="chatter">Within the next few decades, climate change is expected to have profound effects on the world’s weather patterns and temperature tendencies as we know it. These changes to Earth's climate could bring serious adverse complications to public health. 
+While isolated heat waves constitute a significant health risk and are bound to appear in headlines when they arise, recent studies have uncovered an even more unhealthy relationship with cold weather and public health. 
+Opposed to distinct periods where heat waves can pose a deadly threat, cold-related illnesses and deaths can occur long after an arctic blast has passed. And the mortality rate tied to diseases exacerbated by exposure to cold weather is well above that of conditions linked to extreme heat exposure.</p>
+
+      <!-- use class next for progression animation, use class next 2 if no animation -->
+				<div class="button next">Next</div>
+		</div>
+
+
+
+<!-- BLOCK 1.1 -->
+
+		<div id="block1" class="block next-div">
+      <p class="title"><img src="lung.svg" class="icon">Lung Disease</p>
+		<div id="parent">
+        <ul>
+          <li class="child1">Our lungs are continually communicating with and always in contact with the environment. When cold air enters our lungs, it reduces our body's natural response mechanisms of the upper respiratory tract.</li><br>
+          <li class="child2">Cold air can also suppress immune responses to infections like influenza and the common cold. </li><br>
+          <li class="child3">When our immune system is hindered, you are much more likely to contract a lung disease, therefore, during prolonged spells of cold and dry air our bodies are more susceptible to bronchospasm, asthma, and exacerbators of COPD.</li><br>
+        </ul>
+      </div>
+				<div class="button next2 next">Next</div>
+		</div>
+
+
+    <!-- BLOCK 1.2 -->
+
+    		<div id="block1" class="block next-div">
+          <p class="title"><img src="lung.svg" class="icon">Lung Disease</p>
+    		<div id="parent">
+            <ul>
+              <li class="child1"><strong>Whoâ€™s at risk:</strong> The most at risk individuals are the very young and those older than 65. </li><br>
+
+              <li class="child2"><strong>Conditions:</strong> Asthma, COPD, Bronchitis, Acute Bronchitis, Influenza</li><br>
+            </ul>
+          </div>
+    				<div class="button next2 next">Next</div>
+    		</div>
+
+
+<!-- BLOCK 2 -->
+
+<div id="block1" class="block next-div">
+  <p class="title"><img src="lung.svg" class="icon">Heart Disease</p>
+<div id="parent">
+    <ul>
+      <li class="child1">Physical activity, like shoveling snow, for those who have preexisting heart conditions can have fatal consequences.</li><br>
+      <li class="child2">Breathing in cold air while performing physical tasks like shoveling snow increases an individual's blood pressure. Also, cold air can also slow down the flow of blood to the heart and help blood clots form.</li><br>
+      <li class="child3">High winds and precipitation can also increase the rate at which heat leaves the body. The stresses from winter, staying indoors, drinking more alcohol, and exercising less frequently, can also increase your risk of heart disease.</li><br>
+    </ul>
+  </div>
+    <div class="button next2 next">Next</div>
+</div>
+
+
+
+<!-- BLOCK 2.2 -->
+
+    <div id="block1" class="block next-div">
+      <p class="title"><img src="lung.svg" class="icon">Heart Disease</p>
+    <div id="parent">
+        <ul>
+          <li class="child1"><strong>Whoâ€™s at risk:</strong> Individuals over 65 and Individuals with pre-existing heart conditions</li><br>
+
+          <li class="child2"><strong>Conditions:</strong> Angina Pectoris, Congestive artery disease (heart failure), Cerebrovascular disease (stroke), Acute Myocardial infarction (heart attack), Hypertension</li><br>
+        </ul>
+      </div>
+        <div class="button next2 next">Next</div>
+    </div>
+
+
+    <!-- BLOCK 3 -->
+
+    <div id="block1" class="block next-div">
+      <p class="title"><img src="lung.svg" class="icon">Hypothermia</p>
+    <div id="parent">
+        <ul>
+          <li class="child1">Happens when our body is losing heat faster than it can produce heat, causing our internal temperature to dip below 95 degrees Fahrenheit.</li><br>
+          <li class="child2">When body temperature drops, your heart, nervous system, and other organs cannot function at full capacity.</li><br>
+          <li class="child3">When hypothermia is left untreated, it can be fatal. Fatality comes from the eventual complete failure of the heart and respiratory system.</li><br>
+          <li class="child4">Environmental factors that increase the risk of hypothermia include freezing temperatures, humidity, and wind intensity.</li><br>
+        </ul>
+      </div>
+        <div class="button next2 next">Next</div>
+    </div>
+
+
+
+    <!-- BLOCK 3.2 -->
+
+        <div id="block1" class="block next-div">
+          <p class="title"><img src="lung.svg" class="icon">Hypothermia</p>
+        <div id="parent">
+            <ul>
+              <li class="child1"><strong>Whoâ€™s at risk:</strong>Individuals over 65 and those with underlying medical conditions, individuals with lower muscularity, physical fitness, and lower subcutaneous fat, Individuals who abuse substances, individuals with mental impairment, lower levels of education, lack of central heating, those who do not have access to adequate intake of warm foods, drinks, and protective clothing</li><br>
+
+              <li class="child2"><strong>Conditions:</strong>pneumonia, heart rhythm problems, cardiac arrest, and death</li><br> 
+            </ul>
+          </div>
+            <div class="button next2 next">Next</div>
+        </div>
+
+
+        <!-- BLOCK 4 -->
+
+        <div id="block1" class="block next-div">
+          <p class="title"><img src="lung.svg" class="icon">Carbon Monoxide Poisoning</p>
+        <div id="parent">
+            <ul>
+              <li class="child1">Occurs when carbon monoxide builds up in your bloodstream. When there is insufficient oxygen and too much carbon monoxide in the air your body replaces the oxygen in its red blood cells with carbon monoxide.</li><br>
+              <li class="child2">This process leads to critical tissue damage and in some cases death.</li><br>
+              <li class="child3">Carbon Monoxide is an odorless, colorless, tasteless gas that's produced when sources of fuel are burned.</li><br>
+              <li class="child4">As winters continue to get colder and more brutal, inaccessibility to space heaters and other safe forms of ambient heat has risen. Some have turned to the use of outdoor grills or other combustion methods within their homes for warmth. In enclosed spaces like a house without improper ventilation, carbon monoxide from these sources of heat can rapidly amass to dangerous levels.</li><br>
+            </ul>
+          </div>
+            <div class="button next2 next">Next</div>
+        </div>
+
+
+
+        <!-- BLOCK 4.2 -->
+
+            <div id="block1" class="block next-div">
+              <p class="title"><img src="lung.svg" class="icon">Carbon Monoxide Poisoning</p>
+            <div id="parent">
+                <ul>
+                  <li class="child1"><strong>Whoâ€™s at risk:</strong> Infants, Adults 65 and older, individuals who smoke, those who suffer from chronic heart disease, Anemia, and Asthma. Individuals who are sleeping or are under the influence of alcohol are also more susceptible to carbon monoxide poisoning because they may inhale toxic amounts of carbon monoxide without recognizing the symptoms of carbon monoxide poisoning. </li><br>
+
+                  <li class="child2"><strong>Conditions:</strong> Headache, dizziness, vomiting, nausea. If carbon monoxide levels are high enough becoming unconscious or death are also risks.</li><br>
+                </ul>
+              </div>
+                <div class="button reload">Start over</div>
+            </div>
+
+
+
+
+	</div>
+
+
+
+	<script>
+		$('.next').click(function(){
+		   $(this).parent().hide().next().show();//hide parent and show next
+		   $(".child1").delay(800).fadeIn();
+		   $(".child2").delay(1600).fadeIn();
+		   $(".child3").delay(2400).fadeIn();
+		   $(".child4").delay(3200).fadeIn();
+		   $(".child5").delay(4000).fadeIn();
+
+		});
+
+
+		$('.next2').click(function(){
+		   $(this).parent().hide().next().show();//hide parent and show next
+		   $(".child1").hide();
+		   $(".child2").hide();
+		   $(".child3").hide();
+		   $(".child4").hide();
+		   $(".child5").hide();
+
+		});
+
+
+		$('.reload').click(function(){
+			location.reload();
+		});
+
+
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+
+.hero-container {
+/* The image used */
+background-image: url('../sample-images/space3.jpg');
+
+/* Full height */
+height: 4000px;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.slide {
+  color:##000;
+  font-weight: 600;
+  font-size: 2em;
+  position:absolute;
+  left: 25%;
+  z-index: 10;
+  width:50%;
+  //text-shadow: 1px 1px;
+}
+
+.slide1 {
+  top: 180px;
+}
+
+.slide2 {
+  top: 1080px;
+}
+
+.slide3 {
+  top: 2080px;
+}
+
+.slide4 {
+  color:##000;
+  font-weight: 600;
+  font-size: 2em;
+  position:absolute;
+  z-index: 10;
+  width:100%;
+  top: 3080px;
+  text-align:center;
+}
