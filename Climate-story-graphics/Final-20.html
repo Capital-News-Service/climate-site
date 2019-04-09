@@ -38,7 +38,7 @@
    			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
    			<br>
    		</text>
-   		<div id="chart"></div>
+   		<div id="chart-freeze-20"></div>
    		<div id="Label"><center>DECADE</center></div>
    		<div id="source"><text><tspan>Source: BWI Airport Sensor Data</tspan></a></text></div>
    		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
@@ -47,6 +47,7 @@
 
 
 var chart = c3.generate({
+  bindto: '#chart-freeze-20',
     data: {
     	x: 'x',
         columns: [

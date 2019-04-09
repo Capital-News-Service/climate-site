@@ -37,7 +37,7 @@
    			<!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
    			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
    			<br>
-   		<div id="chart"></div>
+   		<div id="chart-cold-10"></div>
    		<div id="Label"><center>DECADE</center></div>
    		<div id="source"><text><tspan>Source: BWI Airport Sensor Data</tspan></a></text></div>
    		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
@@ -45,6 +45,7 @@
    	<script type="text/javascript">
 
 var chart = c3.generate({
+  bindto: '#chart-cold-10',
     data: {
     x: 'x',
         columns: [

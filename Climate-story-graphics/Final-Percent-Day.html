@@ -38,7 +38,7 @@
    			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
    			<br>
    		</text>
-   		<div id="chart"></div>
+   		<div id="chart-percent-cold"></div>
    		<div id="source"><text><tspan>Source: BWI Sensor Data</tspan></a></text></div>
    		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
    	</div>
@@ -46,6 +46,7 @@
 
 
 var chart = c3.generate({
+  bindto: '#chart-percent-cold',
     data: {
     	x: 'x',
         columns: [
