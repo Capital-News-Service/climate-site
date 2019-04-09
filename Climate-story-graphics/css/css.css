@@ -79,10 +79,16 @@ div#container {
 
 .c3-legend-item text{
   font-size: 14px; //change the size of the fonts
+	font-family: 'Montserrat', sans-serif;
+   fill: #fff;
 }
 
-.c3 path, .c3 line {
-	stroke: #fff !important;
+.c3-legend-item {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.c3 .c3-axis path, .c3 .c3-axis line {
+	stroke:#fff;
 }
 
 .c3-axis-y text {
@@ -94,10 +100,6 @@ div#container {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.c3-legend-item {
-   fill: #fff;
-	font-family: 'Montserrat', sans-serif;
-}
 
 .c3-tooltip {
 	color:#000;
