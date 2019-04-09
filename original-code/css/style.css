@@ -11,8 +11,8 @@ BODY {
 
 .container {
   text-align:center;
-  padding-left: 5em;
-  padding-right: 5em;
+  width:90%;
+  max-width:900px;
 }
 
 .hero-container {
@@ -22,11 +22,43 @@ BODY {
 }
 
 .headline-container {
-  width: 1300px;
   margin: auto;
   text-align: center;
   overflow: hidden;
+  max-width:1000px;
+  margin:0 auto;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:100%;
 }
+
+#social-icons {
+  padding-top: 10px;
+}
+
+
+.top-head {
+  font-size:1em;
+  font-family: 'Montserrat', sans-serif;
+  max-width:700px;
+  margin:0 auto;
+}
+
+.hero-text{
+  font-weight:bold;
+  font-family: 'PT Serif', serif;
+  font-size:3em;
+  padding-top:10px;
+  padding-bottom:10px;
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+
+
 
 .toc-container {
   position: relative;
@@ -37,20 +69,7 @@ BODY {
   padding:0px;
 }
 
-.toc-text{
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Poppins', sans-serif;
-  font-size:.85em;
-  color:#000;
-  width:100%;
-  min-height:50px;
-  opacity:.7;
-  background-color: #fff;
-  padding:5px;
-}
+
 
 .embed-container {
   width:100%;
@@ -62,7 +81,7 @@ BODY {
 }
 
 .navbar {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer {
@@ -73,7 +92,6 @@ BODY {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   margin-bottom:100px;
 }
 
@@ -132,39 +150,30 @@ a:visited.toc-link {color:#000;}
 }
 
 
-.toc-image {
-  width:300px;
-}
 
+.footer-image{
+  max-width:700px;
+  width:80%;
+}
 
 /* TYPOGRAPHY */
-
-.hero-text{
-  position: absolute;
-  top: 129%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight:bold;
-  font-family: 'PT Serif', serif;
-  font-size:3vw;
-}
 
 
 .hed {
   font-size:3em;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 p{
   text-align:left;
   line-height:180%;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .byline {
   font-size:1em;
   margin-top:-10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #94B8E0;
 }
 
@@ -184,7 +193,7 @@ p{
 .home {
   font-size:1em;
   margin-top:-10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align:left;
   text-transform: uppercase;
   color: #94B8E0;
@@ -193,13 +202,13 @@ p{
 .chapter {
   font-size:1em;
   margin-top:-10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align:right;
   text-transform: uppercase;
 }
 
 .intro-text {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size:1.4em;
   width: 100%;
   padding-top:25px;
@@ -208,7 +217,7 @@ p{
 
 .chapter-head {
   font-size:2em;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding-top:20px;
   text-transform: uppercase;
   color: #94B8E0;
@@ -216,24 +225,16 @@ p{
 
 .small-head {
   font-size:1.5em;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.top-head {
-  font-size:1vw;
-  font-family: 'Poppins', sans-serif;
-  position: absolute;
-  top: 117%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .caption {
   width:100%;
   max-width:900px;
   margin:0 auto;
   padding-bottom:30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color:#94B8E0;
   text-align: center;
 }
@@ -250,10 +251,11 @@ hr {
 }
 
 .quote {
-  font-family: 'Poppins', sans-serif;
-  font-size:1.7em;
+  font-family: 'Montserrat', sans-serif;
+  font-size:2em;
   text-align: left;
-  padding: 0px 200px 0px 200px;
+  width:50%;
+  margin:0 auto;
   color: #94B8E0;
   margin-top: -10.5em;
   margin-bottom: -4.1em;
@@ -262,19 +264,19 @@ hr {
 .quote-mark {
   color: #94B8E0;
   font-size: 16em;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0px 620px 0px 0px;
 }
 
 .quote-mark2 {
   color: #94B8E0;
   font-size: 16em;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0px 0px 50px 500px;
 }
 
 .quote-attribution {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size:1em;
   color:#94B8E0;
   margin-top: -13em;
@@ -285,7 +287,7 @@ hr {
 .dropcap {
   color: #049AFF;
   float: left;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 4em;
   line-height: 60px;
   padding-top: 4px;
@@ -295,18 +297,35 @@ hr {
 }
 
 .btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
 /* RESPONSIVE */
 
-@media (min-width:500px) and (max-width: 1000px) {
+
+@media (max-width:700px) {
+  .hero-text {
+    font-size:2em;
+  }
+
+.intro-text {
+  font-size:1em;
+  padding-top:100px;
+}
+
+
+}
+
+
+
+@media (max-width:650px) {
 
 .container {
     text-align:center;
     padding-left: 3em;
     padding-right: 3em;
+    width:100%;
   }
 
 .chapter-head {
@@ -315,20 +334,24 @@ hr {
 
 .quote {
 font-size: 1em;
+width:90%;
+margin-top:-50px;
+margin-bottom:0px;
 }
 
 .quote-mark {
-  font-size: 9em;
+  font-size: 5em;
 
 }
 
 .quote-mark2 {
-  font-size: 9em;
-
+  font-size: 5em;
 }
 
 .quote-attribution {
-  font-size: .3em;
+  font-size: 1em;
+  padding: 0px 0px 0px 100px;
+  margin-top:-50px;
 }
 
 
@@ -338,12 +361,12 @@ font-size: 1em;
 /* Table of Contents */
 
 .small-head {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
 .lowercase {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-size: .8em;
 }
@@ -354,35 +377,21 @@ font-size: 1em;
   max-width:100%
   height:auto;
 }
-.row {
-  display:flex;
-  margin-left: 8em;
-}
 
-.row2 {
-  display:flex;
-  margin-left: 8em;
-}
 
-.row3 {
-  display:flex;
-  margin-left: 8em;
-}
 
-.text {
+.toc-text {
   font-family: 'PT Serif', serif;
-  float:left;
-  margin-left:-300px;
-  margin-right: 270px;
-  padding-top: 5px;
+  color:#fff;
+  margin-left:10px;
 }
 
 h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  float:left;
   font-size: 1.5em;
-  margin-left:-300px;
+  text-align:left;
+    margin-left:10px;
 }
 
 .health {
