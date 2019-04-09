@@ -297,34 +297,40 @@ p{
 
 /* RESPONSIVE */
 
-@media(max-width:550px) {
-  p {
-    padding-left:20px;
-    padding-right:10px;
-  }
+@media (min-width:500px) and (max-width: 1000px) {
 
-  .hero-text{
-    font-size:2em;
-    top:50%;
-  }
+.chapter-head {
+  font-size: 1.5em;
+}
 
-  .intro-text {
-    font-size:1em;
-  }
+h3 {
+  font-size: 1em;
+}
 
-  .chapter-head {
-    font-size:1.25em;
-  }
+img {
+  width:65%;
+}
 
-  .hed {
-    font-size:2em;
-  }
+.quote {
+font-size: 1em;
+}
 
-  .quote {
-    font-size:1em;
-  }
+.quote-mark {
+  font-size: 9em;
 
 }
+
+.quote-mark2 {
+  font-size: 9em;
+
+}
+
+.quote-attribution {
+  font-size: .3em;
+}
+
+}
+
 
 /* Table of Contents */
 
