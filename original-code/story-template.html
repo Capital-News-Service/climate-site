@@ -35,6 +35,9 @@
   <!-- our CSS  -->
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- graphics CSS  -->
+  <link rel="stylesheet" href="css/graphics-css.css">
+
   <!-- sample graphic CSS - delete for production  -->
   <link rel="stylesheet" href="css/sample-graphic.css">
 
@@ -96,9 +99,9 @@
       <a href="http://adammarton.com" style="float:left">home page</a>
       <a href="http://adammarton.com" style="float:right"> next chapter</a>
     </div>
-    <br>
-    <br>
+<br>
     <hr>
+
 
       <!-- Start chapter -->
         <p>As global warming continues to increase the atmosphere’s temperature, cold snaps persist in cities like Baltimore and won’t vanish anytime soon.</p>
@@ -126,8 +129,6 @@
 
 
         <!-- /End -->
-<br>
-<br>
         <p>“There is this generalized warming of the planet that would decrease extreme winter weather,” Cohen said. “But also on the other hand, there are more frequent disruptions of the polar vortex which would increase [it], so it's kind of a tug-of-war between the two.”</p>
       <!-- End chapter -->
 
@@ -160,60 +161,31 @@
           comma and $ on tool tip and y-axis,
           custom colors
         -->
+<br>
 
-        <h1>jQuery & CSS3 Skills Bar</h1>
+         		<h1 class="highcharts-title">Number of extreme cold weather days in Baltimore</h1>
 
-        <div class="skillbar clearfix " data-percent="20%">
-          <div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
-          <div class="skillbar-bar" style="background: #e67e22;"></div>
-          <div class="skill-bar-percent">20%</div>
-        </div> <!-- End Skill Bar -->
-
-        <div class="skillbar clearfix " data-percent="25%">
-          <div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
-          <div class="skillbar-bar" style="background: #3498db;"></div>
-          <div class="skill-bar-percent">25%</div>
-        </div> <!-- End Skill Bar -->
-
-        <div class="skillbar clearfix " data-percent="50%">
-          <div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
-          <div class="skillbar-bar" style="background: #2c3e50;"></div>
-          <div class="skill-bar-percent">50%</div>
-        </div> <!-- End Skill Bar -->
-
-        <div class="skillbar clearfix " data-percent="40%">
-          <div class="skillbar-title" style="background: #46465e;"><span>PHP</span></div>
-          <div class="skillbar-bar" style="background: #5a68a5;"></div>
-          <div class="skill-bar-percent">40%</div>
-        </div> <!-- End Skill Bar -->
-
-        <div class="skillbar clearfix " data-percent="75%">
-          <div class="skillbar-title" style="background: #333333;"><span>Wordpress</span></div>
-          <div class="skillbar-bar" style="background: #525252;"></div>
-          <div class="skill-bar-percent">75%</div>
-        </div> <!-- End Skill Bar -->
-
-        <div class="skillbar clearfix " data-percent="100%">
-          <div class="skillbar-title" style="background: #27ae60;"><span>SEO</span></div>
-          <div class="skillbar-bar" style="background: #2ecc71;"></div>
-          <div class="skill-bar-percent">100%</div>
-        </div> <!-- End Skill Bar -->
-
-        <div class="skillbar clearfix " data-percent="70%">
-          <div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
-          <div class="skillbar-bar" style="background: #4288d0;"></div>
-          <div class="skill-bar-percent">70%</div>
-        </div> <!-- End Skill Bar -->
+         		<text class="highcharts-subtitle" y="60">
+         			<tspan>BY JOE CATAPANO</tspan>
+         			<!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+         			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+         			<br>
+              <br>
+         		<div id="chart-cold-10"></div>
+         		<div id="Label"><center>DECADE</center></div>
+         		<div id="source"><text><tspan>Source: BWI Airport Sensor Data</tspan></a></text></div>
+         		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
 
 
       </div>
       <!-- End embed container -->
 
-
+<br>
       <p>The impact from these disruptions could last anywhere from 4-to-8 weeks, according to Cohen, a wide range that makes it difficult to predict how long future cold snaps will be.</p>
 
       <p>“You may get a cold snap like we had with that polar vortex event in late January in the upper Midwest, where they had that historic cold then it moderating quickly, so that's more typical,” Cohen said. “We think of it as more episodic, but there are cases where it's been continuous when the pattern gets locked and it doesn't change."</p>
       <p>In Baltimore, there isn’t an indication that cold snap longevity is changing. The occurrence of three-day-long cold snaps with a minimum temperature below 32 degrees are just as sporadic as previous years. </p>
+<br>
 
   <div class="embed-container">
       <span class="quote-mark">“</span>
@@ -221,6 +193,8 @@
       <span class="quote-mark2">”</span>
       <p class="quote-attribution"> ― John Kennedy Toole, A Confederacy of Dunces</p>
   </div>
+<br>
+<br>
 
     <p>Cold snaps that occur in places that usually experience winter weather such as the Northeastern United States, northern Europe and East Asia are the result of polar vortex disruptions, according to Cohen. When winter extremes occur in other locations, experts consider these events unexplainable.</p>
 
@@ -285,28 +259,27 @@
 
 
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-3"><a href="#chapter"><img src="sample-images/health.png" style="width:1000%;max-width:200px;"></a></div>
-      <div class="col-md-3"><a href="facebook.com"><h3>Health</h3></a><p class="toc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam erat sit amet odio dapibus, pellentesque varius libero eleifend.</p></div>
-      <div class="col-md-3"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5"><a href="#chapter"><img src="sample-images/health.png" style="max-width:310px;"></a></div>
+      <div class="col-md-5"><a href="facebook.com"><h3>Health</h3></a><p class="toc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam erat sit amet odio dapibus, pellentesque varius libero eleifend.</p></div>
+      <div class="col-md-1"></div>
     </div>
 
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-3"><a href="#chapter"><img src="sample-images/communities.png" style="max-width:200px;"></a></div>
-      <div class="col-md-3"> <a href="facebook.com"><h3>Communities</h3></a><p class="toc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam erat sit amet odio dapibus, pellentesque varius libero eleifend.</p></div>
-      <div class="col-md-3"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5"><a href="#chapter"><img src="sample-images/communities.png" style="max-width:310px;"></a></div>
+      <div class="col-md-5"> <a href="facebook.com"><h3>Communities</h3></a><p class="toc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam erat sit amet odio dapibus, pellentesque varius libero eleifend.</p></div>
+      <div class="col-md-1"></div>
 
     </div>
 
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-3"><a href="#chapter"><img src="sample-images/people.png" style="max-width:200px;"></a></div>
-      <div class="col-md-3">  <a href="facebook.com"><h3>People</h3></a><p class="toc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam erat sit amet odio dapibus, pellentesque varius libero eleifend.</p></div>
-      <div class="col-md-3"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5"><a href="#chapter"><img src="sample-images/people.png" style="max-width:310px;"></a></div>
+      <div class="col-md-5">  <a href="facebook.com"><h3>People</h3></a><p class="toc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam erat sit amet odio dapibus, pellentesque varius libero eleifend.</p></div>
+      <div class="col-md-1"></div>
 
     </div>
-
 
 
 
@@ -345,6 +318,8 @@
 
     <!-- Script for sample graphic- delete before production -->
     <script src="js/sample-graphic.js"></script>
+    <!--our c3 javascript-->
+  <script src="js/c3-charts.js"></script>
 
 
       <!-- METRICS -->

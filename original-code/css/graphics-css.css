@@ -35,7 +35,7 @@ a{
 }
 
 /*Styles the div that holds the highchart */
-div#container {
+div#graphic-container {
 	margin-top:20px;
 	margin-bottom:20px;
 	padding-left:20px;
