@@ -34,6 +34,21 @@ BODY {
   width:100%;
 }
 
+/*splash page only */
+.splash-container {
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  max-width:1400px;
+  margin:0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:100%;
+}
+/* end splash page only */
+
 #social-icons {
   padding-top: 10px;
 }
@@ -94,7 +109,17 @@ BODY {
   margin-right: auto;
   margin-bottom:100px;
 }
-
+/*sponsor banner for splash page */
+.rectangle {
+  background: #181818;
+  height:100px;
+  padding-top:25px;
+  margin-top:50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:100px;
+}
 
 /* LINK STYLES */
 
@@ -158,6 +183,26 @@ a:visited.toc-link {color:#000;}
 
 /* TYPOGRAPHY */
 
+/*splash page typography */
+.splash {
+  font-family:'Montserrat', sans-serif;
+  font-weight:bold;
+  font-size:8em;
+  width: 90%;
+  margin: 0 auto;
+  text-shadow: 3px 3px 10px black;
+}
+
+#credit {
+  text-align:left;
+  font-family: 'Montserrat', sans-serif;
+  width:80%;
+  padding-left: 200px;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+/*end splash page only typography */
 
 .hed {
   font-size:3em;
@@ -405,6 +450,11 @@ h3 {
 
 b {
   color:#94B8E0;
+}
+
+.sponsors {
+  width:100%;
+  padding-bottom: 50px;
 }
 
 /* Twitter and Facebook icon styles =========== */
