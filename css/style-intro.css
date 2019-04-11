@@ -1,0 +1,83 @@
+
+
+.splash-hero-container {
+/* The image used */
+background-image: url('../images/smoke.jpg');
+
+/* Full height */
+height: 4000px;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.slide {
+  font-weight: 600;
+  font-size: 2em;
+  position:absolute;
+  left: 50%;
+  margin-left:-400px;
+  z-index: 10;
+  width:800px;
+  font-family: 'PT Serif', serif;
+  //text-shadow: 1px 1px;
+}
+
+.slide1 {
+  top: 380px;
+}
+
+.slide2 {
+  top: 1080px;
+}
+
+.slide3 {
+  top: 2080px;
+}
+
+.slide4 {
+  top: 3080px;
+  font-weight: 600;
+  z-index: 10;
+  text-align:center;
+  font-family:'Montserrat', sans-serif;
+  font-weight:bold;
+  font-size:7em;
+  text-shadow: 3px 3px 10px black;
+  line-height:50%;
+}
+
+.splash-top-head {
+  font-size:.2em;
+  font-family: 'Montserrat', sans-serif;
+  max-width:800px;
+  margin:0 auto;
+}
+
+
+@media (max-width:800px) {
+
+  .slide {
+    font-weight: 600;
+    font-size: 1.5em;
+    position:absolute;
+    left: 5%;
+    margin:0 auto;
+    z-index: 10;
+    width:90%;
+    //text-shadow: 1px 1px;
+  }
+
+  .slide4 {
+    font-size:3em;
+    line-height:80%;
+  }
+
+  .splash-top-head {
+    font-size:.25em;
+  }
+
+}
