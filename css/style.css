@@ -546,7 +546,7 @@ h3 {
 
 @media (max-width:500px) {
   .hero-text {
-    font-size:1.25em;
+    font-size:1em;
     line-height:120%;
   }
 
