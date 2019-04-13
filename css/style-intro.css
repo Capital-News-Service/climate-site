@@ -4,16 +4,26 @@
   height: 100vh;
 }
 
-.fixed-img {
-  background-image: url('../images/smoke.jpg');
+.cover-img {
   height: 100%;
   width: 100%;
-  position: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 }
+
+.fixed-img {
+    position: fixed;
+}
+
+
+
+.relative-img {
+    position: relative;
+}
+
+
 
 .slide {
   font-weight: 600;
@@ -26,6 +36,20 @@
   max-width:800px;
   margin:0 auto;
 }
+
+
+.headline-container-slide {
+  top: -45vh;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  position: relative;
+  margin:0 auto;
+}
+
+
+
 .slide1 {
   top: 45vh;
 }
@@ -50,6 +74,14 @@
   line-height:50%;
 }
 
+.story-container {
+  background: black;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  top: 0vh;
+  background-color: #181818;
+}
 
 .splash-container {
   background: black;
@@ -79,7 +111,6 @@
     margin:0 auto;
     z-index: 10;
     width:90%;
-    //text-shadow: 1px 1px;
   }
 
   .slide4 {

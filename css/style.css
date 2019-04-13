@@ -9,6 +9,7 @@ BODY {
   color: white;
 }
 
+
 .container {
   text-align:center;
   width:90%;
@@ -31,18 +32,6 @@ BODY {
   color: white;
 }
 
-.headline-container {
-  margin: auto;
-  text-align: center;
-  overflow: hidden;
-  max-width:1400px;
-  margin:0 auto;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width:100%;
-}
 
 
 
@@ -52,9 +41,8 @@ BODY {
 
 
 .top-head {
-  font-size:1.2em;
+  font-size:.5em;
   font-family: 'Montserrat', sans-serif;
-  max-width:1400px;
   margin:0 auto;
   text-shadow: 2px 2px 4px #000000;
 
@@ -63,11 +51,12 @@ BODY {
 .hero-text{
   font-weight:bold;
   font-family: 'PT Serif', serif;
-  font-size:4em;
-  padding-top:10px;
+  font-size:2em;
   padding-bottom:10px;
   width: 90%;
+  max-width:900px;
   margin: 0 auto;
+  //text-shadow: 2px 2px 4px #000000;
 
 }
 
@@ -258,8 +247,8 @@ p{
   font-family: 'Montserrat', sans-serif;
   font-size:1.4em;
   width: 100%;
-  padding-top:100px;
   padding-bottom:25px;
+  padding-top:25px;
 }
 
 .intro-text-splash {
@@ -404,7 +393,7 @@ h3 {
   max-width: 100%;
 }
 
-b {
+.bitter-blue {
   color:#94B8E0;
 }
 
@@ -474,13 +463,19 @@ b {
 
 @media (max-width:800px) {
   .hero-text {
-    font-size:2em;
+    font-size:2.7em;
+    line-height:120%;
   }
 
 .top-head {
   font-size:1em;
+  padding-bottom:20px;
+
 }
 
+.headline-container-slide {
+  top: -75vh;
+}
 
 }
 
@@ -552,20 +547,19 @@ b {
 @media (max-width:500px) {
   .hero-text {
     font-size:1.5em;
+    line-height:120%;
   }
 
   .top-head{
-    font-size:.8em;
-    padding-top:100px;
-    margin: 10px;
+    font-size:.5em;
+    text-shadow: none;
   }
 
-  .intro-text {
-    padding-top:130px;
-    margin-top:30px;
-  }
+
+
 
 }
+
 
 
 @media (max-width:400px) {

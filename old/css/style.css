@@ -52,7 +52,7 @@ BODY {
 
 
 .top-head {
-  font-size:.5em;
+  font-size:1.2em;
   font-family: 'Montserrat', sans-serif;
   max-width:1400px;
   margin:0 auto;
@@ -63,7 +63,7 @@ BODY {
 .hero-text{
   font-weight:bold;
   font-family: 'PT Serif', serif;
-  font-size:2em;
+  font-size:4em;
   padding-top:10px;
   padding-bottom:10px;
   width: 90%;

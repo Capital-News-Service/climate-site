@@ -5,6 +5,7 @@
 }
 
 .fixed-img {
+  background-image: url('../images/smoke.jpg');
   height: 100%;
   width: 100%;
   position: fixed;
@@ -25,12 +26,6 @@
   max-width:800px;
   margin:0 auto;
 }
-
-.slide1-story {
-  top: 25vh;
-}
-
-
 .slide1 {
   top: 45vh;
 }
@@ -55,14 +50,6 @@
   line-height:50%;
 }
 
-.story-container {
-  background: black;
-  width: 100%;
-  margin: 0;
-  position: relative;
-  top: 100vh;
-  background-color: #181818;
-}
 
 .splash-container {
   background: black;
