@@ -480,7 +480,11 @@ h3 {
 }
 
 
-@media (max-width:650px) {
+@media (max-width:670px) {
+
+  .hero-text {
+    font-size:1.5em;
+  }
 
     .container {
         text-align:center;
