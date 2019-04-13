@@ -83,12 +83,25 @@
   }
 
   .slide4 {
-    font-size:3em;
-    line-height:80%;
+    font-size:5em;
+    line-height:100%;
   }
 
   .splash-top-head {
     font-size:.25em;
+  }
+
+}
+
+@media (max-width:500px) {
+
+  .slide4 {
+    font-size:3em;
+    line-height:100%;
+  }
+
+  .splash-top-head {
+    font-size:.2em !important;
   }
 
 }

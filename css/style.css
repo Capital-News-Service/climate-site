@@ -521,7 +521,7 @@ b {
 
     #cns-logo {
       width:40px;
-
+      margin-left:-20px;
     }
 
     p, .intro-text, .intro-text-splash {
