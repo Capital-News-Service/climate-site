@@ -9,12 +9,12 @@ BODY {
   color: white;
 }
 
-
 .container {
   text-align:center;
   width:90%;
   max-width:900px;
 }
+
 
 #cns-logo {
   position: absolute;
@@ -25,42 +25,6 @@ BODY {
   opacity:.7;
 
 }
-
-.hero-container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-
-
-
-#social-icons {
-  padding-top: 10px;
-}
-
-
-.top-head {
-  font-size:.5em;
-  font-family: 'Montserrat', sans-serif;
-  margin:0 auto;
-  text-shadow: 1px 1px 1px #181818;
-
-}
-
-.hero-text{
-  font-weight:bold;
-  font-family: 'PT Serif', serif;
-  font-size:2em;
-  padding-bottom:10px;
-  width: 90%;
-  max-width:900px;
-  margin: 0 auto;
-  //text-shadow: 1px 1px 1px #cdcdcd;
-
-}
-
-
 
 .toc-container {
   position: relative;
@@ -88,6 +52,24 @@ BODY {
 
 }
 
+.story-container {
+  background: black;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  top: 0vh;
+  background-color: #181818;
+}
+
+.splash-container {
+  background: black;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  top: 600vh;
+  background-color: #181818;
+}
+
 .navbar {
   font-family: 'Montserrat', sans-serif;
 }
@@ -100,6 +82,100 @@ BODY {
   margin-right: auto;
   padding-bottom:20px;
 }
+
+
+
+/* HERO ELEMENTS */
+
+.hero-container {
+  height: 100vh;
+}
+
+.cover-img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.fixed-img {
+    position: fixed;
+}
+
+.relative-img {
+    position: relative;
+}
+
+.slide {
+  font-weight: 600;
+  font-family: 'PT Serif', serif;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  position: relative;
+  //text-shadow: 1px 1px;
+  max-width:800px;
+  margin:0 auto;
+}
+
+/* story headline slide */
+.headline-container-slide {
+  top: -45vh;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  position: relative;
+  margin:0 auto;
+}
+
+/* slides 1-4 for the splash page */
+.slide1 {
+  top: 45vh;
+}
+
+.slide2 {
+  top: 200vh;
+}
+
+.slide3 {
+  top: 350vh;
+}
+
+.slide4 {
+  top: 500vh;
+  font-weight: 600;
+  z-index: 10;
+  text-align:center;
+  font-family:'Montserrat', sans-serif;
+  font-weight:bold;
+  font-size:7em;
+  text-shadow: 3px 3px 10px black;
+  line-height:50%;
+}
+
+.splash-top-head {
+  font-size:.2em;
+  font-family: 'Montserrat', sans-serif;
+  max-width:800px;
+  margin:0 auto;
+}
+
+.top-head {
+  font-size:.5em;
+  font-family: 'Montserrat', sans-serif;
+  margin:0 auto;
+  text-shadow: 1px 1px 1px #181818;
+
+}
+
+
+
+
+
+
 
 /* LINK STYLES */
 
@@ -153,6 +229,7 @@ a:visited.toc-link {color:#000;}
   max-width:250px;
 }
 
+
 /* Clear floats after image containers */
 .align::after {
   content: "";
@@ -162,23 +239,21 @@ a:visited.toc-link {color:#000;}
   overflow: auto;
 }
 
-
-
 .footer-image{
   max-width:700px;
   width:80%;
 }
-
 
 .arrows {
   height:23px;
   width:15px;
 }
 
+
+
 /* TYPOGRAPHY */
 
 /*splash page typography */
-
 
 #credit {
   text-align:left;
@@ -190,6 +265,18 @@ a:visited.toc-link {color:#000;}
 }
 
 /*end splash page only typography */
+
+.hero-text{
+  font-weight:bold;
+  font-family: 'PT Serif', serif;
+  font-size:2em;
+  padding-bottom:10px;
+  width: 90%;
+  max-width:900px;
+  margin: 0 auto;
+  //text-shadow: 1px 1px 1px #cdcdcd;
+
+}
 
 .hed {
   font-size:3em;
@@ -272,7 +359,6 @@ p{
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .caption {
   width:100%;
   max-width:900px;
@@ -327,7 +413,6 @@ hr {
   padding: 0px 0px 0px 400px;
 }
 
-
 .dropcap {
   color: #049AFF;
   float: left;
@@ -358,12 +443,6 @@ hr {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-size: .8em;
-}
-
-.column {
-  flex: 50%;
-  max-width:100%
-  height:auto;
 }
 
 
@@ -403,7 +482,13 @@ h3 {
   margin:0 auto;
 }
 
+
+
 /* Twitter and Facebook icon styles =========== */
+
+#social-icons {
+  padding-top: 10px;
+}
 
 .icon-twitter, .icon-facebook {
   margin-right:10px;
@@ -417,7 +502,6 @@ h3 {
   color:#cdcdcd;
 
 }
-
 
 @font-face {
   font-family: 'icons';
@@ -456,8 +540,6 @@ h3 {
 
 
 
-
-
 /* RESPONSIVE */
 
 
@@ -467,15 +549,34 @@ h3 {
     line-height:120%;
   }
 
-.top-head {
-  font-size:.5em;
-  padding-bottom:20px;
+  .top-head {
+    font-size:.5em;
+    padding-bottom:20px;
+  }
 
-}
+  .headline-container-slide {
+    top: -80vh;
+  }
 
-.headline-container-slide {
-  top: -80vh;
-}
+  .slide {
+    font-weight: 600;
+    font-size: 1.5em;
+    position:absolute;
+    left: 5%;
+    margin:0 auto;
+    z-index: 10;
+    width:90%;
+  }
+
+  .slide4 {
+    font-size:5em;
+    line-height:100%;
+    font-weight:bold;
+  }
+
+  .splash-top-head {
+    font-size:.25em;
+  }
 
 }
 
@@ -486,69 +587,69 @@ h3 {
     font-size:1.5em;
   }
 
-    .container {
-        text-align:center;
-        padding-left: 3em;
-        padding-right: 3em;
-        width:100%;
-      }
+  .container {
+    text-align:center;
+    padding-left: 3em;
+    padding-right: 3em;
+    width:100%;
+  }
 
-    .chapter-head {
+  .chapter-head {
       font-size: 1.5em;
-    }
+  }
 
-    .quote {
+  .quote {
     font-size: 1em;
     width:90%;
     margin-top:-50px;
     margin-bottom:0px;
+  }
+
+  .quote-mark {
+    font-size: 5em;
+  }
+
+  .quote-mark2 {
+    font-size: 5em;
+  }
+
+  .quote-attribution {
+    font-size: 1em;
+    padding: 0px 0px 0px 100px;
+    margin-top:-50px;
+  }
+
+  #cns-logo {
+    width:40px;
+    margin-left:-20px;
+  }
+
+  p, .intro-text, .intro-text-splash {
+    font-size:1em;
+  }
+
+  h3 {
+    padding-top:10px;
+  }
+
+  .table-images {
+    float:none;
+    width:100%;
+  }
+
+  .embed-container {
+    padding:0px;
     }
 
-    .quote-mark {
-      font-size: 5em;
+  .byline {
+    font-size:.7em;
+  }
 
-    }
-
-    .quote-mark2 {
-      font-size: 5em;
-    }
-
-    .quote-attribution {
-      font-size: 1em;
-      padding: 0px 0px 0px 100px;
-      margin-top:-50px;
-    }
-
-    #cns-logo {
-      width:40px;
-      margin-left:-20px;
-    }
-
-    p, .intro-text, .intro-text-splash {
-      font-size:1em;
-    }
-
-    h3 {
-      padding-top:10px;
-    }
-
-    .table-images {
-      float:none;
-      width:100%;
-    }
-
-    .embed-container {
-      padding:0px;
-    }
-
-    .byline {
-      font-size:.7em;
-    }
 }
 
 
-
 @media (max-width:500px) {
+
   .hero-text {
     font-size:1em;
     line-height:120%;
@@ -559,17 +660,29 @@ h3 {
     //text-shadow: none;
   }
 
+  .slide {
+      font-size: 1.25em;
+  }
 
+  .slide4 {
+    font-size:3em;
+    line-height:100%;
+    font-weight:bold;
+  }
 
+  .splash-top-head {
+    font-size:.2em !important;
+  }
 
 }
 
 
-
 @media (max-width:400px) {
 
-.container {
+  .container {
     padding-left: 1em;
     padding-right: 1em;
     width:100%;
   }
+
+}
