@@ -20,7 +20,7 @@ BODY {
   top: 5px;
   left:50%;
   width:90px;
-  margin-left:-50px;
+  margin-left:-45px;
   opacity:.7;
 
 }
@@ -524,7 +524,7 @@ b {
 
     }
 
-    p, .intro-text {
+    p, .intro-text, .intro-text-splash {
       font-size:1em;
     }
 
@@ -553,10 +553,19 @@ b {
     font-size:1.5em;
   }
 
-.top-head{
-  font-size:.7em;
-  padding-top:100px;
-}
+  .top-head{
+    font-size:.7em;
+    padding-top:100px;
+  }
 
 
 }
+
+
+@media (max-width:400px) {
+
+.container {
+    padding-left: 1em;
+    padding-right: 1em;
+    width:100%;
+  }

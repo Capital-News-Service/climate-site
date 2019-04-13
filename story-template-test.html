@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Climate Story</title>
+  <title>News story template</title>
   <meta name="description" content="Merrill College of Journalism, UMD">
   <meta name="author" content="Adam Marton">
 
@@ -35,6 +35,9 @@
   <!-- our CSS  -->
   <link rel="stylesheet" href="css/style.css">
 
+
+  <!-- our CSS  -->
+  <link rel="stylesheet" href="css/style-intro.css">
   <!-- graphics CSS  -->
   <link rel="stylesheet" href="css/graphics-css.css">
 
@@ -63,28 +66,38 @@
   <!-- Hero image -->
     <!-- Can repeat for fullscreen image anywhere, just need to put outside container -->
 
-  <div class="hero-container">
-    <img src="images/icegrad.png" class="hero-image">
-    <img src="images/cns-logo.png" id="cns-logo">
-    <div class="headline-container">
 
-    <div class="top-head"><b> BITTER COLD</b> : CLIMATE CHANGE, PUBLIC HEALTH AND BALTIMORE</div>
-    <div class="hero-text">Cold snaps persist despite global warming in Baltimore</div>
-    <br>
-        <p class="text-center byline">By Abigail Bentz | CAPITAL NEWS SERVICE</p>
 
-              <!-- Social icons-->
-               <div id="social-icons">
-                  <span class="icon-facebook"></span><span class="icon-twitter"></span>
-                </div>
+
+<div class="splash-hero-container">
+  <div class="fixed-img" style="background-image: url('images/icegrad.png')"></div>
+  <img src="images/cns-logo.png" id="cns-logo">
+
+          <p class="slide slide1">
+
+              <div class="top-head"><b> BITTER COLD</b> : CLIMATE CHANGE, PUBLIC HEALTH AND BALTIMORE</div>
+              <div class="hero-text">Cold snaps persist despite global warming in Baltimore</div>
+
+          </p>  <!-- This slideUp when scrolling down -->
+
     </div>
 
-  </div>
 
 
-  <!-- Start container -->
-  <div class="container">
-<br>
+
+    <!-- Start container -->
+    <div class="splash-container">
+      <div class="container">
+        <br>
+        <!-- Social icons-->
+         <div id="social-icons">
+            <span class="icon-facebook"></span><span class="icon-twitter"></span>
+          </div>
+      <br>
+
+      <br>
+          <p class="text-center byline">By Abigail Bentz | CAPITAL NEWS SERVICE</p>
+
 
 
       <!-- Introduction paragraph-->
@@ -112,13 +125,13 @@
     <!-- Open wider (headline) container  -->
 <div class="embed-container">
         <!-- Image block with caption -->
-    <img src="images/buildings.png"  class="image">
+    <img src="images/buildings.png" class="image">
       <div class="align">
         <div class="table-images">
-            <img src="images/man.jpg" class="image">
+            <img src="images/man.jpg"  class="image">
           </div>
         <div class="table-images">
-          <img src="images/photo.png"  class="image">
+          <img src="images/photo.png" class="image">
         </div>
   </div>
   </div>
@@ -152,14 +165,14 @@
 
 
       <!-- Embed container for graphics and video or whatever - to make full screen, move outside of container -->
-      <div class="graphic" class="embed-container">
+      <div class="embed-container">
 
         <!-- Bar chart including:
           cutom title for tool tip,
           comma and $ on tool tip and y-axis,
           custom colors
         -->
-
+<br>
 
          		<h1 class="highcharts-title">Number of extreme cold weather days in Baltimore</h1>
 
@@ -178,6 +191,7 @@
       </div>
       <!-- End embed container -->
 
+<br>
       <p>The impact from these disruptions could last anywhere from 4-to-8 weeks, according to Cohen, a wide range that makes it difficult to predict how long future cold snaps will be.</p>
 
       <p>“You may get a cold snap like we had with that polar vortex event in late January in the upper Midwest, where they had that historic cold then it moderating quickly, so that's more typical,” Cohen said. “We think of it as more episodic, but there are cases where it's been continuous when the pattern gets locked and it doesn't change."</p>
@@ -194,23 +208,6 @@
 <br>
 
     <p>Cold snaps that occur in places that usually experience winter weather such as the Northeastern United States, northern Europe and East Asia are the result of polar vortex disruptions, according to Cohen. When winter extremes occur in other locations, experts consider these events unexplainable.</p>
-
-    <div id="container" class="graphic">
-      <h1 class="highcharts-title">Number of below freezing cold snaps in Baltimore</h1>
-
-      <text class="highcharts-subtitle" y="60">
-        <tspan>BY JOE CATAPANO</tspan>
-        <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
-        <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
-        <br>
-      </text>
-      <div id="coldsnap"></div>
-      <div id="Label"><center>DECADE</center></div>
-      <div id="source"><text><tspan>Source: BWI Airport Sensor Data</tspan></a></text></div>
-      <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
-    </div>
-
-
 
     <p>This winter, snowfall hit Maui, Hawaii at its lowest elevation ever. Meanwhile, Seattle recorded record-breaking temperatures and Las Vegas had snowfall for the first time in over a decade.</p>
 
@@ -289,7 +286,7 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-5"><a href="#chapter"><img src="images/people.png"  class="toc-images"></a></div>
-      <div class="col-md-5">  <a href="facebook.com"><h3>People</h3></a><p class="toc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam erat sit amet odio dapibus. <a href="#">Read the story.</a></p></div>
+      <div class="col-md-5">  <a href="facebook.com"><h3>People</h3></a><p class="toc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam erat sit amet odio dapibus. <a href="#">Read the story.</a></div>
       <div class="col-md-1"></div>
 
     </div>
@@ -328,7 +325,6 @@
 
   <!-- Our custom Javascript -->
   <script src="js/javascript.js"></script>
-
 
     <!--our c3 javascript-->
   <script src="js/c3-charts.js"></script>
