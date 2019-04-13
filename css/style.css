@@ -56,6 +56,8 @@ BODY {
   font-family: 'Montserrat', sans-serif;
   max-width:1400px;
   margin:0 auto;
+  text-shadow: 2px 2px 4px #000000;
+
 }
 
 .hero-text{
@@ -483,7 +485,6 @@ b {
 }
 
 
-
 @media (max-width:650px) {
 
     .container {
@@ -554,10 +555,14 @@ b {
   }
 
   .top-head{
-    font-size:.7em;
+    font-size:.8em;
     padding-top:100px;
+    margin: 10px;
   }
 
+  .intro-text {
+    padding-top:130px;
+  }
 
 }
 
