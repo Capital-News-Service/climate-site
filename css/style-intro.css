@@ -85,6 +85,7 @@
   .slide4 {
     font-size:5em;
     line-height:100%;
+    font-weight:bold;
   }
 
   .splash-top-head {
@@ -95,9 +96,13 @@
 
 @media (max-width:500px) {
 
+  .slide {
+      font-size: 1.25em;
+  }
   .slide4 {
     font-size:3em;
     line-height:100%;
+    font-weight:bold;
   }
 
   .splash-top-head {
