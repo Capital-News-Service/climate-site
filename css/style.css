@@ -260,6 +260,14 @@ p{
   padding-bottom:25px;
 }
 
+.intro-text-splash {
+  font-family: 'Montserrat', sans-serif;
+  font-size:1.4em;
+  width: 100%;
+  padding-top:25px;
+  padding-bottom:25px;
+}
+
 .chapter-head {
   font-size:2em;
   font-family: 'Montserrat', sans-serif;
