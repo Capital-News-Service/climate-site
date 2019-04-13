@@ -1,45 +1,45 @@
 
 
 .splash-hero-container {
-/* The image used */
-background-image: url('../images/smoke.jpg');
+  height: 100vh;
+}
 
-/* Full height */
-height: 4000px;
-
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+.fixed-img {
+  background-image: url('../images/smoke.jpg');
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
 
 .slide {
   font-weight: 600;
-  font-size: 2em;
-  position:absolute;
-  left: 50%;
-  margin-left:-400px;
-  z-index: 10;
-  width:800px;
   font-family: 'PT Serif', serif;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  position: relative;
   //text-shadow: 1px 1px;
+  max-width:800px;
+  margin:0 auto;
 }
-
 .slide1 {
-  top: 380px;
+  top: 45vh;
 }
 
 .slide2 {
-  top: 1080px;
+  top: 90vh;
 }
 
 .slide3 {
-  top: 2080px;
+  top: 135vh;
 }
 
 .slide4 {
-  top: 3080px;
+  top: 180vh;
   font-weight: 600;
   z-index: 10;
   text-align:center;
@@ -49,6 +49,17 @@ background-size: cover;
   text-shadow: 3px 3px 10px black;
   line-height:50%;
 }
+
+
+.splash-container {
+  background: black;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  top: 225vh;
+  background-color: #181818;
+}
+
 
 .splash-top-head {
   font-size:.2em;
