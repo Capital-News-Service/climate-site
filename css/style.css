@@ -35,13 +35,6 @@ BODY {
   padding:0px;
 }
 
-#sponsor-container {
-  width:100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align:center;
-  background:#fff;
-}
 
 .embed-container {
   width:100%;
@@ -476,13 +469,64 @@ h3 {
   color:#94B8E0;
 }
 
-.sponsors {
+#cns {
+  display: block;
+  width: 30%;
+}
+
+#park {
+  display: block;
+  width: 50%;
+}
+
+#ona {
+  display: block;
+  width: 75%;
+}
+
+#merrill {
+  display: block;
+  width: 70%;
+  padding-top:20px;
+}
+
+#npr {
+  display: block;
+  width: 40%;
+}
+
+#way {
+  display: block;
+  width: 100%;
+  padding-top:25px;
+}
+
+.sponsor-container {
   width:100%;
-  max-width:1100px;
+  background:#fff;
+}
+
+.sponsor-container-inside {
+  width:100%;
+  max-width:1000px;
+  background:#fff;
   margin:0 auto;
 }
 
+.sponsor {
+  max-width:200px;
+  margin:0 auto;
+}
 
+.row-sponsor {
+  text-align:center;
+  margin-bottom:20px;
+}
+
+ .row-sponsor2 {
+   margin-right: 0px!important;
+  margin-left: 0px!important;
+ }
 
 /* Twitter and Facebook icon styles =========== */
 
@@ -672,6 +716,11 @@ h3 {
 
   .splash-top-head {
     font-size:.2em !important;
+  }
+
+  .main_image {
+    width: 350px;
+    height: auto;
   }
 
 }
