@@ -202,6 +202,8 @@ a:visited.toc-link {color:#000;}
 
 .image {
   width:100%;
+  padding-top:20px;
+  padding-bottom:20px;
 }
 
 .hero-image{
@@ -267,8 +269,14 @@ a:visited.toc-link {color:#000;}
   width: 90%;
   max-width:900px;
   margin: 0 auto;
-  //text-shadow: 1px 1px 1px #cdcdcd;
+  //text-shadow: 3px 3px 10px black;
 
+}
+
+.profiles {
+  font-family: 'Montserrat', sans-serif;
+  font-size:3em;
+  text-transform: uppercase;
 }
 
 .hed {
@@ -358,7 +366,17 @@ p{
   margin:0 auto;
   padding-bottom:30px;
   font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
   color:#94B8E0;
+  text-align: center;
+}
+
+.map-headline {
+  font-size:2em;
+  font-family: 'Montserrat', sans-serif;
+  padding-top:20px;
+  font-weight: bold;
+  color: #94B8E0;
   text-align: center;
 }
 

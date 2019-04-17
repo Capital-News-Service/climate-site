@@ -188,3 +188,86 @@ hide: 'data1'
                     }
                 }
                 });
+
+
+                var chart = c3.generate({
+                    data: {
+
+                        columns: [
+
+                            ['Shutoffs', 2320, 2589, 2557, 9466, 10646, 10241, 7648, 9438, 9699, 14109, 4147, 4225],
+                        ],
+                        type: 'bar',
+                      },
+                      color: {
+                          pattern: ['#94B8E0', '#6661AD','#E4A35E']
+                      },
+                 //ADD COMMA AND DOLLAR SIGN TO TOOL TIP
+                        tooltip: {
+                            format: {
+                                value: function(value) {
+                                    return d3.format(",.2f")(value)
+                                }
+                            }
+                        },
+                          //ADD COMMA AND DOLLAR SIGN TO Y AXIS
+                        axis : {
+                        y : {
+                            tick: {
+                                format: d3.format(",")
+                                //
+                //                format: function (d) { return "$" + d; }
+                            }
+                        },
+                        x: {
+                          type: 'category',
+                            categories: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.']
+                        }
+                    },
+                  //HIDE LEGEND
+                    legend: {
+                hide: 'data1'
+                  //or hide: ['data1', 'data2']
+                },
+                  //CUSTOM TITLE FOR TOOPTIP
+                    tooltip: {
+                        format: {
+                            title: function (d) { return 'Shutoffs ' + d; },
+                    //            value: d3.format(',') // apply this format to both y and y2
+                        }
+                    }
+                    });
+
+
+
+
+                    var chart = c3.generate({
+                        data: {	x: 'x',
+                            columns: [
+                              ['x', 2014, 2015, 2016, 2017, 2018, 2019],
+                                ['data1', 3, 12, 3, 12, 21, 12],
+                                ['data2', 15, 36, 16, 34, 56, 51]
+                            ],
+
+
+                    names: {
+                        data1: 'City of Baltimore',
+                        data2: 'All of Maryland'
+
+                    },
+
+
+
+                            type: 'bar'
+                        },
+                        color: {
+                            pattern: ['#94B8E0', '#6661AD','#E4A35E']
+                        },
+                        bar: {
+                            width: {
+                                ratio: 0.65 // this makes bar width 50% of length between ticks
+                            }
+                            // or
+                            //width: 100 // this makes bar width 100px
+                        }
+                    });
