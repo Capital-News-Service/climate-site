@@ -124,6 +124,15 @@ BODY {
   margin:0 auto;
 }
 
+.headline-container-slide-nophoto {
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  margin:0 auto;
+  margin-top:100px;
+}
+
 /* slides 1-4 for the splash page */
 .slide1 {
   top: 45vh;
