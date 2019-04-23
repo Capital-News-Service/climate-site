@@ -196,8 +196,9 @@ hide: 'data1'
 
 
 // Story template
-// Shutoffs
+// Shutoffs bar chart
 var chart = c3.generate({
+  bindto: '#turnoffs-bar-chart',
     data: {
 
         columns: [
@@ -207,16 +208,11 @@ var chart = c3.generate({
         ],
         type: 'bar',
         //ADD CUSTOM COLORS
-      colors: {
-          data1: '#1b79b9'
-      },
-      color: function (color, d) {
-          // d will be 'id' when called for legends
-          return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
-      }
 
+ },
 
-
+ color: {
+     pattern: ['#94B8E0', '#6661AD','#E4A35E']
  },
  //ADD COMMA AND DOLLAR SIGN TO TOOL TIP
         tooltip: {
@@ -253,6 +249,106 @@ hide: 'data1'
         }
     }
     });
+
+
+
+
+
+    // Shutoffs line chart
+
+    var chart = c3.generate({
+      bindto: '#turnoffs-line-chart',
+        data: {
+
+            columns: [
+
+                ['BGE', 2.66, 2.97, 2.94, 10.87, 12.22, 11.76, 8.78, 10.84, 11.14, 16.20, 4.76, 4.85],
+    			['Other Companies', 1.20, 1.35, 2.27, 15.75, 13.26, 13.01, 10.49, 12.44, 13.23, 15.16, 1.14, 0.71]
+            ],
+            types: {
+                BGE: 'line',
+    			      Other_Companies: 'line'
+
+            },
+            groups: [['data1', 'data2']]
+        },
+        color: {
+            pattern: ['#94B8E0', '#6661AD','#E4A35E']
+        },
+     //ADD COMMA AND DOLLAR SIGN TO TOOL TIP
+            tooltip: {
+                format: {
+                    value: function(value) {
+                        return d3.format(",.2f")(value)
+                    }
+                }
+            },
+              //ADD COMMA AND DOLLAR SIGN TO Y AXIS
+            axis : {
+            y : {
+                tick: {
+                    format: d3.format(",")
+                    //
+    //                format: function (d) { return "$" + d; }
+                }
+            },
+    			y: {
+                label: {
+                    text: 'Percent',
+                    position: 'outer-middle'
+                }
+            },
+            x: {
+              type: 'category',
+                categories: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.']
+            }
+        },
+      //HIDE LEGEND
+        legend: {
+    hide: 'data1'
+      //or hide: ['data1', 'data2']
+    },
+      //CUSTOM TITLE FOR TOOPTIP
+        tooltip: {
+            format: {
+                title: function (index) {
+                  if (index == 0) {
+                    return 'January'
+                  } if (index == 1) {
+                  return 'February'
+                } if (index == 2){
+                  return 'March'
+                } if (index == 3){
+                  return 'April'
+                } if (index == 4){
+                  return 'May'
+                } if (index == 5){
+                  return 'June'
+                } if (index == 6){
+                  return 'July'
+                } if (index == 7){
+                  return 'August'
+                } if (index == 8){
+                  return 'September'
+                } if (index == 9){
+                  return 'October'
+                } if (index == 10){
+                  return 'November'
+                }
+
+                    else {
+                      return 'December'
+                    }
+
+                },
+                name: function (name, ratio, id, index) { return name; },
+                value: function (value, ratio, id, index) { return value; }
+
+        //            value: d3.format(',') // apply this format to both y and y2
+            }
+        }
+        });
+
 
 
 

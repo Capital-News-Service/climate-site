@@ -70,18 +70,12 @@
 
   <!-- Hero image -->
     <!-- Can repeat for fullscreen image anywhere, just need to put outside container -->
+    <div class="headline-container-slide-nophoto">
 
-<div class="hero-container">
-  <div class="cover-img relative-img" style="background-image: url('images/icegrad.png')"></div>
-  <a href="http://www.cnsmaryland.org"><img src="images/cns-logo.png" id="cns-logo"></a>
+                <div class="hero-text">All graphics</div>
 
-          <div class="headline-container-slide">
+            </div>  <!-- This slideUp when scrolling down -->
 
-              <div class="top-head"><b> BITTER COLD</b> : CLIMATE CHANGE, PUBLIC HEALTH AND BALTIMORE</div>
-              <div class="hero-text">Cold snaps persist despite global warming in Baltimore</div>
-
-          </div>  <!-- This slideUp when scrolling down -->
-    </div>
 
 
     <!-- Start container -->
@@ -89,13 +83,9 @@
       <div class="container">
         <br>
         <!-- Social icons-->
-         <div id="social-icons">
-            <span class="icon-facebook"></span><span class="icon-twitter"></span>
-          </div>
-      <br>
 
-      <br>
-          <p class="text-center byline">By Abigail Bentz | CAPITAL NEWS SERVICE</p>
+
+<p class="chapter-head"><a name="chapter">Climate story graphics</p>
 
 
       <!-- Embed container for graphics and video or whatever - to make full screen, move outside of container -->
@@ -106,10 +96,11 @@
           comma and $ on tool tip and y-axis,
           custom colors
         -->
+
 <br>
 
-         		<h1 class="highcharts-title">Number of extreme cold weather days in Baltimore</h1>
-
+         		<h1 class="highcharts-title">Number of extreme cold days in Baltimore (below 10 degrees)</h1>
+              <p class="caption">Baltimore saw spikes in days that dipped to 10 degrees or below in the 1960s and 1980s, but the city has relatively consistent patterns from decade to decade. The 2010s, however, accumulated more than the previous two decades.</p>
          		<text class="highcharts-subtitle" y="60">
          			<tspan>BY JOE CATAPANO</tspan>
          			<!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
@@ -125,10 +116,93 @@
       </div>
       <!-- End embed container -->
 
+
+
+      <div class="embed-container">
+              <h1 class="highcharts-title">Number of freezing days in Baltimore</h1>
+                <p class="caption">The number of days that dip to 32 degrees or below in Baltimore has stayed consistent over the past 80 years. The 1960s peaked at more than 1,000 such days, but that’s happened just once in the last eight decades.</p>
+              <text class="highcharts-subtitle" y="60">
+                <tspan>BY JOE CATAPANO</tspan>
+                <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+                <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+                <br>
+              </text>
+              <div id="chart-freeze-32"></div>
+              <div id="Label"><center>DECADE</center></div>
+              <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
+              <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+           </div>
+
+
+    <div class="embed-container">
+       <h1 class="highcharts-title">Number of extreme cold days in Baltimore  (below 20 degrees)</h1>
+        <p class="caption">While the number of sub-freezing days hasn’t fluctuated dramatically from decade to decade, the number of extremely cold days has. There have been fewer days that have fallen below 20 and 10 degrees in each of the last three decades than in the three prior.</p>
+       <text class="highcharts-subtitle" y="60">
+         <tspan>BY JOE CATAPANO</tspan>
+         <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+         <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+         <br>
+       </text>
+       <div id="chart-20-10-compare"></div>
+       <div id="Label"><center>DECADE</center></div>
+       <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
+       <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+    </div>
+
+
+    <div class="embed-container">
+       <h1 class="highcharts-title">Number of below freezing cold snaps in Baltimore</h1>
+        <p class="caption">In Baltimore, the number of cold snaps that last at least three or at least five days hasn't changed significantly over the years. In the last eight decades, three-day cold snaps peaked in the 1990s while five-day cold snaps peaked in the 1960s.</p>
+       <text class="highcharts-subtitle" y="60">
+         <tspan>BY JOE CATAPANO</tspan>
+         <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+         <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+         <br>
+       </text>
+       <div id="coldsnap"></div>
+       <div id="Label"><center>DECADE</center></div>
+       <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
+       <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+    </div>
+
+
+    <div class="embed-container">
+      <!-- Full screen image -->
+      <h1 class="highcharts-title">The polar vortex explained</h1>
+      <p class="caption">The concept of the polar vortex, a phenomenon that continues to push cold artic air into the United States.</p>
+
+      <img src="images/vortex.png" class="image">
+      <div id="source"><text><tspan>Credit: National Oceanic and Atmospheric Administration</tspan></a></text></div>
+
+      <!-- end full screen image-->
+    </div>
+
+
+
+    <div class="embed-container">
+          <figure class='lede feature full_width'>
+            <h1 class="highcharts-title">NASA's Atmospheric Infrared Sounder (AIRS) instrument captures a polar vortex</h1><br>
+            <p class="caption">In January 2019, the polar vortex dropped deep into the continental United States, causing record-breaking temperatures in the Midwest and frigid weather across the Northeast.</p>
+          <img alt="NASA's Atmospheric Infrared Sounder (AIRS) instrument captures a polar vortex" class='main_image' src='https://climate.nasa.gov/system/news_items/main_images/2839_PIA22823_768px.gif'>
+          <div id="source"><text><tspan>Credit: NASA</tspan></a></text></div>
+        </figure>
+    </div>
+
+
 <br>
 
-    <div id="container">
-      <h1 class="highcharts-title">Cold Related Deaths in Baltimore City vs all of Maryland</h1>
+
+
+<p class="chapter-head"><a name="chapter">Health story graphics</p>
+
+<p>Missing:
+  <br> 1. Cold conditions and how they are affected by cold (Aaron and Adam)
+  <br> 2. Maps showing correlation between health and temp by neighborhood (Jake)
+  <br> 3. Dynamic bar charts showing how certain conditions are affected by temp (Adam and Sean)<br><br>
+
+    <div id="embed-container">
+      <h1 class="highcharts-title">Cold Related Deaths in Baltimore and all of Maryland</h1>
+      <p class="caption">Over the past five years, over 30% of all cold-related deaths in Maryland have occurred in Baltimore City.</p>
 
       <text class="highcharts-subtitle" y="60">
         <tspan>By Aaron Wilson</tspan>
@@ -143,86 +217,51 @@
 
 <br>
 
-    <p class="caption">Over the past five years, over 30% of all cold-related deaths in Maryland have occurred in Baltimore City.</p>
+
+
+<p class="chapter-head"><a name="chapter">Safety net story graphics</p>
+
+
 
 
 <div class="embed-container">
 
   <p class="map-headline">Warming Centers in Baltimore</p>
+  <p class="caption">During periods of extremely cold weather, the Baltimore Health Commissioner declares a Code Blue Extreme Cold Alert and the city opens warming centers, which are community locations like libraries and senior centers where residents can go to warm up. However, many of the warming centers have limited hours or aren’t open daily.</p>
+      <iframe width="100%" height="720" frameborder="0" src="https://amarton.carto.com/builder/0d059c9b-525b-4dd8-a2f6-0a36203d6300/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-      <iframe width="100%" height="520" frameborder="0" src="https://amarton.carto.com/builder/0d059c9b-525b-4dd8-a2f6-0a36203d6300/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-    <p class="caption">During periods of extremely cold weather, the Baltimore Health Commissioner declares a Code Blue Extreme Cold Alert and the city opens warming centers, which are community locations like libraries and senior centers where residents can go to warm up. However, many of the warming centers have limited hours or aren’t open daily.</p>
-
+</div>
 
 <br><br>
 
-<div id="container">
+  <div id="embed-container">
    		<h1 class="highcharts-title">BGE Average Low-Income Customer Turnoffs and Reconnections by Month (2009-2018)</h1>
-
+        <p class="caption">The Maryland Public Service Commission collects monthly reports from Maryland power companies like Baltimore Gas and Electric (BGE) that show the number of low-income customers whose power is turned off or reconnected. Customers are defined as low-income if they receive bill payment assistance. Due to weather restrictions that make turning power off during the winter more difficult, most turn-offs occur between April and October, peaking in October. While BGE does reconnect about an average of almost 1,000 low-income customers per October, the disconnections and reconnections are not necessarily directly connected; reconnections in a particular month may not be for the same people who were cut off earlier in that month.</p>
    		<text class="highcharts-subtitle" y="60">
    			<tspan>BY DANIELLE KIEFER AND NOAH JOHNSON</tspan>
    			<!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
    			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
    			<br>
-   			<span style="height:8px; font-size:8pt; background-color:#fbd603 ; color:#fbd603 ;">_______________________________________________</span>
    		</text>
-   		<div id="chart"></div>
+   		<div id="turnoffs-bar-chart"></div>
    		<div id="source"><text><a href="https://www.psc.state.md.us/annual-utility-reports/"><tspan>Source: Maryland Public Service Commission</tspan></a></text></div>
    		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
    	</div>
 
-    <div class="embed-container">
-           <div id="container">
-            <h1 class="highcharts-title">Number of freezing days in Baltimore</h1>
-
-            <text class="highcharts-subtitle" y="60">
-              <tspan>BY JOE CATAPANO</tspan>
-              <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
-              <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
-              <br>
-            </text>
-            <div id="chart-freeze-32"></div>
-            <div id="Label"><center>DECADE</center></div>
-            <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
-            <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
-           </div>
-         </div>
-
-
-<div class="embed-container">
-   <div id="container">
-     <h1 class="highcharts-title">Number of extreme cold days in Baltimore</h1>
-
-     <text class="highcharts-subtitle" y="60">
-       <tspan>BY JOE CATAPANO</tspan>
-       <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
-       <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
-       <br>
-     </text>
-     <div id="chart-20-10-compare"></div>
-     <div id="Label"><center>DECADE</center></div>
-     <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
-     <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
-  </div>
-  </div>
-
-
-  <div class="embed-container">
-   <div id="container" class="graphic">
-     <h1 class="highcharts-title">Number of below freezing cold snaps in Baltimore</h1>
-
-     <text class="highcharts-subtitle" y="60">
-       <tspan>BY JOE CATAPANO</tspan>
-       <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
-       <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
-       <br>
-     </text>
-     <div id="coldsnap"></div>
-     <div id="Label"><center>DECADE</center></div>
-     <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
-     <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
-</div>
-</div>
+<br><br>
+    <div id="embed-container">
+     		<h1 class="highcharts-title">Average Low-Income Household Turn-offs by Month: BGE vs. Other Maryland Companies (2009-2018)</h1>
+          <p class="caption">The chart shows the average percentage of power turn-offs by month for the 10-year period spanning January 2009 through December 2018. The blue line represents turn-offs carried out by Baltimore Gas and Electric while the purple line represents turn-offs carried out by other Maryland utilities Delmarva Power, Pepco Holdings and Potomac Edison.</p>
+     		<text class="highcharts-subtitle" y="60">
+     			<tspan>BY AARON WILSON AND NOAH JOHNSON<</tspan>
+     			<!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+     			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+     			<br>
+     		</text>
+     		<div id="turnoffs-line-chart"></div>
+     		<div id="source"><text><a href="https://www.psc.state.md.us/annual-utility-reports/"><tspan>Source: Maryland Public Service Commission</tspan></a></text></div>
+     		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+     	</div>
 
 
   <!-- Footer-->
