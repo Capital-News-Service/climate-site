@@ -197,20 +197,27 @@ hide: 'data1'
 
 // Story template
 // Shutoffs
-
 var chart = c3.generate({
-    bindto: '#chart-bge-shutoffs-bar',
     data: {
 
         columns: [
 
-            ['Shutoffs', 2320, 2589, 2557, 9466, 10646, 10241, 7648, 9438, 9699, 14109, 4147, 4225],
+            ['Turnoffs', 232, 258.9, 255.7, 946.6, 1064.6, 1024.1, 764.8, 943.8, 969.9, 1410.9, 414.7, 422.5],
+            ['Reconnections', 169.1, 189.7, 194.1, 527.7, 626.7, 595.3, 497.8, 642.1, 653.2, 976.1, 334.1, 303]
         ],
         type: 'bar',
+        //ADD CUSTOM COLORS
+      colors: {
+          data1: '#1b79b9'
       },
-      color: {
-          pattern: ['#94B8E0', '#6661AD','#E4A35E']
-      },
+      color: function (color, d) {
+          // d will be 'id' when called for legends
+          return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+      }
+
+
+
+ },
  //ADD COMMA AND DOLLAR SIGN TO TOOL TIP
         tooltip: {
             format: {
@@ -241,11 +248,12 @@ hide: 'data1'
   //CUSTOM TITLE FOR TOOPTIP
     tooltip: {
         format: {
-            title: function (d) { return 'Shutoffs ' + d; },
+            title: function (d) { return 'Turnoffs and Reconnections ' + d; },
     //            value: d3.format(',') // apply this format to both y and y2
         }
     }
     });
+
 
 
 // Health Story

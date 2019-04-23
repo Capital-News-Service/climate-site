@@ -1,0 +1,290 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Bitter Cold: Climate change, public health and Baltimore | CNS Maryland</title>
+  <meta name="description" content="Bitter Cold: Climate change, public health and Baltimore">
+  <meta name="author" content="Capital News Service at Merrill College of Journalism, University of Maryland">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://cnsmaryland.org/wp-content/uploads/2017/02/cns_favion-1.png">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:title" content="Bitter Cold">
+    <meta name="twitter:description" content="Climate change, public health and Baltimore">
+    <meta name="twitter:image" content="https://cnsmaryland.org/interactives/spring-2019/bitter-cold/images/twitter-thumb-splash.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Open Graph data for Facebook -->
+    <meta property="og:title" content="Bitter Cold: Climate change, public health and Baltimore" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cnsmaryland.org/interactives/spring-2019/bitter-cold/" />
+    <meta property="og:image" content="https://cnsmaryland.org/interactives/spring-2019/bitter-cold/images/fb-thumb-splash.png" />
+    <meta property="og:description" content="Extreme temperatures pose a serious, long-term health threat for people with chronic medical conditions — and climate change is making the problem worse." />
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- c3.css -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.13/c3.min.css" rel="stylesheet">
+
+  <!-- d3.js and c3.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.13/c3.min.js"></script>
+
+
+  <!-- our CSS  -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+  <!-- graphics CSS  -->
+  <link rel="stylesheet" href="css/graphics-css.css">
+
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+
+
+    <!-- METRICS -->
+    <meta name="parsely-title" content="Bitter Cold Story Template" />
+    <meta name="parsely-link" content="https://cnsmaryland.org/interactives/spring-2019/bitter-cold/climate.html" />
+    <meta name="parsely-type" content="post" />
+    <meta name="parsely-image-url" content="https://cnsmaryland.org/interactives/spring-2019/bitter-cold/images/fb-thumb-climate.png" />
+    <meta name="parsely-pub-date" content="2019-04-15T13:00:00Z" />
+    <meta name="parsely-section" content="Climate" />
+    <meta name="parsely-author" content="CNS Maryland" />
+    <meta name="parsely-tags" content="climate, health, baltimore, journalism, interactives" />
+
+
+
+  <title>Bitter Cold</title>
+</head>
+<body>
+
+
+  <!-- Hero image -->
+    <!-- Can repeat for fullscreen image anywhere, just need to put outside container -->
+
+<div class="hero-container">
+  <div class="cover-img relative-img" style="background-image: url('images/icegrad.png')"></div>
+  <a href="http://www.cnsmaryland.org"><img src="images/cns-logo.png" id="cns-logo"></a>
+
+          <div class="headline-container-slide">
+
+              <div class="top-head"><b> BITTER COLD</b> : CLIMATE CHANGE, PUBLIC HEALTH AND BALTIMORE</div>
+              <div class="hero-text">Cold snaps persist despite global warming in Baltimore</div>
+
+          </div>  <!-- This slideUp when scrolling down -->
+    </div>
+
+
+    <!-- Start container -->
+    <div class="story-container">
+      <div class="container">
+        <br>
+        <!-- Social icons-->
+         <div id="social-icons">
+            <span class="icon-facebook"></span><span class="icon-twitter"></span>
+          </div>
+      <br>
+
+      <br>
+          <p class="text-center byline">By Abigail Bentz | CAPITAL NEWS SERVICE</p>
+
+
+      <!-- Embed container for graphics and video or whatever - to make full screen, move outside of container -->
+      <div class="embed-container">
+
+        <!-- Bar chart including:
+          cutom title for tool tip,
+          comma and $ on tool tip and y-axis,
+          custom colors
+        -->
+<br>
+
+         		<h1 class="highcharts-title">Number of extreme cold weather days in Baltimore</h1>
+
+         		<text class="highcharts-subtitle" y="60">
+         			<tspan>BY JOE CATAPANO</tspan>
+         			<!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+         			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+         			<br>
+              <br>
+         		<div id="chart-cold-10"></div>
+         		<div id="Label"><center>DECADE</center></div>
+         		<div id="source"><text><tspan>Source: BWI Airport Sensor Data</tspan></a></text></div>
+         		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+
+
+      </div>
+      <!-- End embed container -->
+
+<br>
+
+    <div id="container">
+      <h1 class="highcharts-title">Cold Related Deaths in Baltimore City vs all of Maryland</h1>
+
+      <text class="highcharts-subtitle" y="60">
+        <tspan>By Aaron Wilson</tspan>
+        <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+        <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+        <br>
+      </text>
+      <div id="cold-deaths-bar"></div>
+      <div id="source"><text><a href="https://preparedness.health.maryland.gov/Pages/Home.aspx"><tspan>Source: Maryland Department of Health </tspan></a></text></div>
+      <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+    </div>
+
+<br>
+
+    <p class="caption">Over the past five years, over 30% of all cold-related deaths in Maryland have occurred in Baltimore City.</p>
+
+
+<div class="embed-container">
+
+  <p class="map-headline">Warming Centers in Baltimore</p>
+
+      <iframe width="100%" height="520" frameborder="0" src="https://amarton.carto.com/builder/0d059c9b-525b-4dd8-a2f6-0a36203d6300/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    <p class="caption">During periods of extremely cold weather, the Baltimore Health Commissioner declares a Code Blue Extreme Cold Alert and the city opens warming centers, which are community locations like libraries and senior centers where residents can go to warm up. However, many of the warming centers have limited hours or aren’t open daily.</p>
+
+
+<br><br>
+
+<div id="container">
+   		<h1 class="highcharts-title">BGE Average Low-Income Customer Turnoffs and Reconnections by Month (2009-2018)</h1>
+
+   		<text class="highcharts-subtitle" y="60">
+   			<tspan>BY DANIELLE KIEFER AND NOAH JOHNSON</tspan>
+   			<!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+   			<tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+   			<br>
+   			<span style="height:8px; font-size:8pt; background-color:#fbd603 ; color:#fbd603 ;">_______________________________________________</span>
+   		</text>
+   		<div id="chart"></div>
+   		<div id="source"><text><a href="https://www.psc.state.md.us/annual-utility-reports/"><tspan>Source: Maryland Public Service Commission</tspan></a></text></div>
+   		<!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+   	</div>
+
+    <div class="embed-container">
+           <div id="container">
+            <h1 class="highcharts-title">Number of freezing days in Baltimore</h1>
+
+            <text class="highcharts-subtitle" y="60">
+              <tspan>BY JOE CATAPANO</tspan>
+              <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+              <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+              <br>
+            </text>
+            <div id="chart-freeze-32"></div>
+            <div id="Label"><center>DECADE</center></div>
+            <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
+            <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+           </div>
+         </div>
+
+
+<div class="embed-container">
+   <div id="container">
+     <h1 class="highcharts-title">Number of extreme cold days in Baltimore</h1>
+
+     <text class="highcharts-subtitle" y="60">
+       <tspan>BY JOE CATAPANO</tspan>
+       <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+       <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+       <br>
+     </text>
+     <div id="chart-20-10-compare"></div>
+     <div id="Label"><center>DECADE</center></div>
+     <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
+     <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+  </div>
+  </div>
+
+
+  <div class="embed-container">
+   <div id="container" class="graphic">
+     <h1 class="highcharts-title">Number of below freezing cold snaps in Baltimore</h1>
+
+     <text class="highcharts-subtitle" y="60">
+       <tspan>BY JOE CATAPANO</tspan>
+       <!-- ^^ PUT YOUR NAME HERE, TAKE CREDIT FOR YOUR COOL WORK ^^ -->
+       <tspan onclick="location.href=&quot;http://cnsmaryland.org&quot;"> | CAPITAL NEWS SERVICE</tspan>
+       <br>
+     </text>
+     <div id="coldsnap"></div>
+     <div id="Label"><center>DECADE</center></div>
+     <div id="source"><text><tspan>Source: BWI Airport Sensor Data (1940-2018)</tspan></a></text></div>
+     <!-- ^^ PUT YOUR SOURCE HERE AND LINK IT^^ -->
+</div>
+</div>
+
+
+  <!-- Footer-->
+  <div class="footer">
+          <a href="#footer"><center><img src="images/footer2.png" class="footer-image"></a></center>
+  </div>
+  <!-- end footer-->
+
+</div>
+<!-- close container -->
+
+
+
+
+  <!-- JavaScript calls -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+  <!-- Variables for social media icon popups -->
+  <script type="text/javascript">
+    //Twitter variables
+    var tweet = "Bitter Cold. Climate change, public health and Baltimore."; //Tweet text
+    var url = "https://cnsmaryland.org/interactives/spring-2019/bitter-cold/"; //Interactive URL
+
+    //Facebook variables
+    var picture = "https://cnsmaryland.org/interactives/spring-2019/bitter-cold/images/fb-thumb-splash.png"; //Picture URL
+    var title = "Bitter Cold"; //Post title
+    var description = "Extreme temperatures pose a serious, long-term health threat for people with chronic medical conditions — and climate change is making the problem worse."; //Post description
+    var url = "https://cnsmaryland.org/interactives/spring-2019/bitter-cold/"; //Interactive URL
+
+
+  </script>
+
+  <!-- Our custom Javascript -->
+  <script src="js/javascript.js"></script>
+
+    <!--our c3 javascript-->
+  <script src="js/c3-charts.js"></script>
+
+
+      <!-- METRICS -->
+        <!-- START Parse.ly Include: Standard -->
+        <div id="parsely-root" style="display: none">
+          <span id="parsely-cfg" data-parsely-site="cnsmaryland.org"></span>
+        </div>
+        <script>
+            (function(s, p, d) {
+              var h=d.location.protocol, i=p+"-"+s,
+                  e=d.getElementById(i), r=d.getElementById(p+"-root"),
+                  u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+                  :"static."+p+".com";
+              if (e) return;
+              e = d.createElement(s); e.id = i; e.async = true;
+              e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+            })("script", "parsely", document);
+        </script>
+        <!-- END Parse.ly Include: Standard -->
+
+
+</body>
+</html>
