@@ -199,7 +199,7 @@ a:visited {
 }
 
 a:active {
-  color:#44FFCA;
+  color:#B591ED;
   text-decoration:none;
 }
 
@@ -294,6 +294,10 @@ a:visited.toc-link {color:#000;}
 .hed {
   font-size:3em;
   font-family: 'Montserrat', sans-serif;
+}
+
+.top-credit{
+  font-size:.8em;
 }
 
 p{
