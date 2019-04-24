@@ -520,6 +520,12 @@ h3 {
   padding-top:20px;
 }
 
+#acf {
+  display: block;
+  width: 100%;
+  padding-top:20px;
+}
+
 #npr {
   display: block;
   width: 40%;
