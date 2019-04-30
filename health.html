@@ -33,8 +33,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.13/c3.min.css" rel="stylesheet">
 
   <!-- d3.js and c3.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.13/c3.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
 
 
   <!-- our CSS  -->
@@ -62,6 +63,36 @@
     <meta name="parsely-tags" content="climate, health, baltimore, journalism, interactives" />
 
 
+    <!-- D3 graphic styles-->
+
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            #vis {
+                height: 100%;
+                max-height:500px;
+                margin: 0;
+                background:#181818;
+                width:100%;
+                max-width:1000px;
+                margin:0 auto;
+            }
+
+            path, line {
+              stroke:#fff;
+            }
+
+            #vis text, #selected_temp, .degree-text {
+              color:#fff;
+              fill:#fff;
+              font-family: 'Montserrat', sans-serif;
+              font-size:1em;
+            }
+
+        </style>
+
 
   <title>Bitter Cold</title>
 </head>
@@ -85,7 +116,7 @@
 
 
     <!-- Start container -->
-    <div class="story-container">
+
       <div class="container">
         <br>
         <!-- Social icons-->
@@ -204,7 +235,44 @@
 
 <p>A CNS analysis of Baltimore city emergency response data measures illustrates this relationship. Between 2014 and 2018, on days when the temperature fell below 40 degrees, 9% of all EMS calls were for respiratory conditions like asthma and COPD, compared to 6% when the temperature was 40 or above.</p>
 
-<p class="chapter-head">CONDITION VARIATION BY TEMPERATURE BUCKET EMS GRAPHIC GOES HERE</p>
+
+
+
+
+
+
+
+  <!-- START D3 Graphic for EMS calls -->
+
+          <div class="embed-container">
+              <h1 class="highcharts-title">EMS calls for certain health conditions increase as the temperature rises</h1>
+              <p class="caption">This chart shows the rise and fall of emergency medical calls for certain health conditions at various temperatures in Baltimore city. Each bar represents the percentage of calls that particular health condition represents of total calls in the specified temperature range. Drag the slider to change the temperature range and explore how EMS calls changed at different temperatures. </p>
+
+                <form>
+                    <span class="degree-text">Select a temperature:</span>
+                    <input type="range" min=0 max=100 step=10 id="temp" value=70 oninput="selected_temp.value = temp.value">
+
+                  <span class="degree-text">Temps in the</span>  <output name="selected_temp" id="selected_temp">70</output><span class="degree-text">s</span>
+                </form>
+              </div>
+      <!-- Close container for D3 graphic to work -->
+      </div>
+
+                <div id="vis">
+                </div>
+    <!-- Reopen container after D3 graphic -->
+    <div class="container">
+      <div class="embed-container">
+        <div id="source"><text><tspan>*In percents
+        <br>Source: Baltimore EMS calls 2014-2018, data obtained from Baltimore City Fire Department</tspan></text></div>
+
+      </div>
+
+  <!-- //END D3 Graphic for EMS calls -->
+
+
+
+
 
 <p>When it comes to arthritis, many who suffer from it see a connection to cold, yet studies conflict.</p>
 
@@ -344,6 +412,7 @@
 
     <!--our c3 javascript-->
   <script src="js/c3-charts.js"></script>
+  <script src="js/d3-graphic-script.js"></script>
 
 
       <!-- METRICS -->
