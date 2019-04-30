@@ -387,6 +387,14 @@ p{
   text-align: center;
 }
 
+.slide-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  color:white;
+  text-shadow: 6px 6px 8px #181818;
+}
+
+
 .map-headline {
   font-size:2em;
   font-family: 'Montserrat', sans-serif;
