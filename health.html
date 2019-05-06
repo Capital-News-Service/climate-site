@@ -84,12 +84,34 @@
               stroke:#fff;
             }
 
-            #vis text, #selected_temp, .degree-text {
+            #selected_temp, .degree-text {
               color:#fff;
               fill:#fff;
               font-family: 'Montserrat', sans-serif;
               font-size:1em;
             }
+
+            #vis text {
+              color:#fff;
+              fill:#fff;
+              font-family: 'Montserrat', sans-serif;
+              font-size:.8em;
+            }
+
+            @media (max-width:800px) {
+
+              #vis text {
+                font-size:.5em;
+              }
+            }
+
+            @media (max-width:500px) {
+
+              .d3-graphic, #vis {
+                display:none;
+              }
+            }
+
 
         </style>
 
@@ -244,8 +266,7 @@
 
 
   <!-- START D3 Graphic for EMS calls -->
-
-          <div class="embed-container">
+          <div class="embed-container d3-graphic">
               <h1 class="highcharts-title">EMS calls for certain health conditions increase as the temperature rises</h1>
               <p class="caption">This chart shows the rise and fall of emergency medical calls for certain health conditions at various temperatures in Baltimore city. Each bar represents the percentage of calls that particular health condition represents of total calls in the specified temperature range. Drag the slider to change the temperature range and explore how EMS calls changed at different temperatures. <br>
               <text class="highcharts-subtitle" y="60">
@@ -265,12 +286,11 @@
                 </div>
     <!-- Reopen container after D3 graphic -->
     <div class="container">
-      <div class="embed-container">
+      <div class="embed-container d3-graphic">
         <div id="source"><text><tspan>*In percents
         <br>Source: Baltimore EMS calls 2014-2018, data obtained from Baltimore City Fire Department</tspan></text></div>
 
       </div>
-
   <!-- //END D3 Graphic for EMS calls -->
 
 
@@ -446,8 +466,7 @@
 
       <!--Summer Message-->
       <div class="container">
-            <p id="credit"><b class="bitter-blue">Stay tuned.</b> During the Summer, Capital News Service will be reporting on the public health effects of climate change during hot weather. The hot weather stories will be launched in September 2019. </p>
-            <p id="credit">Follow the Climate and <a href="https://cnsmaryland.org/interactives/spring-2019/baltimore-climate-temperature-health/blog/">Health Project blog</a> or sign up for our <a href="https://cnsmaryland.org/interactives/spring-2019/baltimore-climate-temperature-health/blog/signup.html">e-newsletter </a>for details.</p>
+        <p id="credit"><a href="https://cnsmaryland.org/interactives/spring-2019/baltimore-climate-temperature-health/"><b class="bitter-blue">Stay tuned.</b></a> During the summer, Capital News Service will be reporting on the public health effects of climate change during hot weather. Follow the Climate and <a href="https://cnsmaryland.org/interactives/spring-2019/baltimore-climate-temperature-health/blog/">Health Project blog</a> or sign up for our <a href="https://cnsmaryland.org/interactives/spring-2019/baltimore-climate-temperature-health/blog/signup.html">e-newsletter </a>for details.</p>
 
       </div>
 
