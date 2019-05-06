@@ -6,7 +6,7 @@
 
 
    <!-- d3 import -->
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="js/c3.min.js"></script>
 
   <!-- JQuery import -->
@@ -14,7 +14,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
+
   <!-- Popper import -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
@@ -127,13 +127,14 @@
       text-align:center;
     }
     h2 {
-      font-weight:600;
-      font-size:16pt;
+      font-weight:200;
+      font-size:11pt;
       fill:#2c2c2c;
       color:white;
       margin-bottom:5px;
       margin-top:10px;
-      text-align:center;
+      text-align: justify;
+
     }
     h3 {
       font-family:'Poppins', sans-serif;
@@ -233,8 +234,11 @@
 </head>
 <body>
   <div id="container" style="min-width: 300px; max-width: 1200px; display: flex;flex-direction: column; margin: 0 auto">
-    <h1>Demographic vs Health Condition</h1>
+    <h1>How health conditions relate to race, income, poverty and housing in Baltimore</h1>
     <h3>By Jake Gluck | <a href="http://cnsmaryland.org" target="_blank" style="color:#94B8E0">Capital News Service</a></h3>
+    <h2>In Baltimore, the neighborhood-level prevalence of some chronic health conditions rises and falls in tandem with familiar markers in the city: variations in race, income, poverty and housing conditions.  This graphic, based on a Capital News Service analysis of inpatient hospital visit records and U.S. census in Maryland between 2014 and 2018, allows you to explore those disease-demographic relationships for five medical conditions - carbon monoxide poisoning, hypothermia, asthma, COPD and diabetes -- by changing the dropdown menus on each map.</h2>
+   <h2>The left map shows demographic rates by ZIP code, the right map shows the percentage of cases with a diagnosis for a given condition. The scatterplot shows one dot per ZIP code, aligned to the selected disease condition and demographic factor; the red line shows the strength of the relationship between the two.  The sharper the slope of the line, the stronger the relationship. Take asthma: in ZIP codes where the poverty rate is higher, the prevalance of asthma is also higher.  This doesn't mean, necessarily, that poverty causes asthma or vice versa, just that neighborhoods with more poor peple have more people with asthma.</h2>
+
     <!-- <p style= "text-align:center;"> ... </p> -->
     <div style="margin-top:20px;margin-left:35px;margin-right:35px" class="row">
       <div id="map" class="col-sm-4"></div>
@@ -249,10 +253,10 @@
     <div id = "graphic-text" style="margin-top:20px;margin-left:0px;margin-right:0px;text-align:center;" class="row">
     </div>
     <div id="source"><text><a href="" target="_blank"><tspan style="color:#94B8E0">Source: Our Source</tspan></a></text></div>
-  
+
 
   </div>
-   
+
 </body>
 
 
@@ -269,14 +273,13 @@
                  d > 10   ? '#ffeda0' :
                             '#ffffcc';
       }
-      
+
       //////////////////////////////////////////////
       //                SETUP                      //
       //////////////////////////////////////////////
 
       mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFnbHVjayIsImEiOiJjamFqeHNrdnQyZjFrMzNsZDBrcHM2dzd3In0.84EdvBJ5XlBpintC80Jlow';
 
-      var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
       // create a map in the "map" div, set the view to a given place and zoom
       var map = L.map('map').setView([39.3, -76.62], 11);
       // add an OpenStreetMap tile layer
@@ -289,7 +292,7 @@
       // add an OpenStreetMap tile layer
       L.tileLayer(mbUrl, {
           id: 'mapbox.light',
-          attribution: mbAttr
+          attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
       }).addTo(map2);
 
       //////////////////////////////////////////////
@@ -297,11 +300,11 @@
       //////////////////////////////////////////////
 
       // make a new label for the bottom of the graphic with text that matches the data shown
-      
+
       function makeNewLabel(){
         x_feat = $('#select option:selected').val().toLowerCase();
         y_feat = $('#select2 option:selected').val().toLowerCase();
-        newLabel = '<p class="col-sm-12" style="font-size:35px;color:white;">How <span style="color:#94B8E0;">' + y_feat +'</span> correlates with <span style="color:#94B8E0;">' + x_feat +'</span></p>'
+        newLabel = '<p class="col-sm-12" style="font-size:1.55em;color:white;">How <span style="color:#94B8E0;">' + x_feat +'</span> correlates with <span style="color:#94B8E0;">' + y_feat +'</span></p>'
         document.getElementById("graphic-text").innerHTML = newLabel;
       }
 
@@ -325,7 +328,7 @@
       var dropdown = L.control({position: 'topright'});
       dropdown.onAdd = function (map) {
           var div = L.DomUtil.create('div', 'info legend');
-          div.innerHTML = '<select id="select"><option>Black %</option><option>Poverty %</option><option>Median Household Income</option><option>Single Family Detached Houses %</option><option>Renter %</option><option>Vacancy %</option><option>Median Home Price</option><option>Median Age</option></select>';
+          div.innerHTML = '<select id="select"><option>Asthma Prevalence</option><option>Carbon Monoxide Prevalence</option><option>Hypothermia Prevalence</option><option>COPD Prevalence</option><option>Diabetes Prevalence</option></select>';
       div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
           return div;
       };
@@ -334,7 +337,7 @@
       var dropdown2 = L.control({position: 'topright'});
       dropdown2.onAdd = function (map) {
           var div2 = L.DomUtil.create('div', 'info legend');
-          div2.innerHTML = '<select id="select2"><option>Carbon Monoxide %</option><option>Hypothermia %</option><option>Influenza %</option><option>Bronchitis %</option><option>COPD %</option><option>Asthma %</option><option>Heart Disease %</option><option>Diabetes %</option></select>';
+          div2.innerHTML = '<select id="select2"><option>Poverty</option><option>Black Population</option><option>Median Household Income</option><option>Single Family Detached Houses</option><option>Renter</option><option>Vacancy</option><option>Median Home Price</option></select>';
       div2.firstChild.onmousedown = div2.firstChild.ondblclick = L.DomEvent.stopPropagation;
           return div2;
       };
@@ -349,27 +352,29 @@
         x_rdinterval = 0;
         x_feat = $('#select option:selected').index()
         x_interval = ((planes["max"][x_feat] - planes["min"][x_feat])/10)
+        // this is not yet a percent, make sure to convert by moving demial two to the left
         if (x_interval < 1){
           x_rdinterval = 1;
         }
         if (x_interval < .1){
-          x_rdinterval = 2;
+          x_rdinterval = 1;
         }
         if (x_interval < .01){
-          x_rdinterval = 3;
+          x_rdinterval = 1;
         }
         if (x_interval < .001){
-          x_rdinterval = 4;
+          x_rdinterval = 2;
         }
         if (x_interval < .0001){
-          x_rdinterval = 5;
-        }    
+          x_rdinterval = 3;
+        }
         if (x_interval < .00001){
-          x_rdinterval = 6;
+          x_rdinterval = 4;
         }
         y_rdinterval = 0;
         y_feat = $('#select2 option:selected').index()
         y_interval = ((planes2["max"][y_feat] - planes2["min"][y_feat])/10)
+
         if (y_interval < 1){
           y_rdinterval = 1;
         }
@@ -384,40 +389,54 @@
         }
         if (y_interval < .0001){
           y_rdinterval = 5;
-        }    
+        }
         if (y_interval < .00001){
           y_rdinterval = 6;
         }
 
         var div = L.DomUtil.create('div', 'our_legend'),
           labels = ""
-          for (i = 9;i>0;i--){
-            if (i == 1){
+          for (i = 8;i>-1;i--){
+            if (i == 0){
               labels = labels +
                 ('<div style="height:45px;width:100%"> \
-                  <div style="text-align:center;height:100%;width:39%;margin-left:1%;line-height:45px;;white-space: nowrap;overflow:hidden;"> <= ' + parseFloat((x_interval * 1).toFixed(x_rdinterval)) + '</div> \
-                  <div style="background-color:' + getColor(i * 10) + ';height:100%;width:14%;margin-left:43%;margin-top:-45px"></div> \
-                  <div style="text-align:center;height:100%;width:39%;margin-left:60%;margin-top:-45px;line-height:45px;white-space: nowrap;overflow:hidden;"> <= ' + parseFloat((y_interval * 1).toFixed(y_rdinterval)) + '</div> \
-                  </div>');
+                  <div style="text-align:center;height:100%;width:39%;margin-left:1%;line-height:45px;;white-space: nowrap;overflow:hidden;"> <= ' + parseFloat(((planes["min"][x_feat] + (x_interval * 1)) * 100).toFixed(x_rdinterval)).toString().replace(/^[0]+/, "") + '%</div>');
+                if (y_feat == 2 || y_feat == 6){
+                  y_piece = '<div style="background-color:' + getColor(i * 11) + ';height:100%;width:14%;margin-left:43%;margin-top:-45px"></div> \
+                  <div style="text-align:center;height:100%;width:39%;margin-left:60%;margin-top:-45px;line-height:45px;white-space: nowrap;overflow:hidden;"> <= $' + parseFloat((planes2["min"][y_feat] + (y_interval * 1)).toFixed(y_rdinterval)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")  + '</div> \
+                  </div>'
+                }else{
+                  y_piece = '<div style="background-color:' + getColor(i * 11) + ';height:100%;width:14%;margin-left:43%;margin-top:-45px"></div> \
+                  <div style="text-align:center;height:100%;width:39%;margin-left:60%;margin-top:-45px;line-height:45px;white-space: nowrap;overflow:hidden;"> <= ' + parseFloat((planes2["min"][y_feat] + (y_interval * 1)).toFixed(y_rdinterval)).toString()  + '%</div> \
+                  </div>'
+                }
+                labels = labels + y_piece;
             }else{
                labels = labels +
                 ('<div style="height:45px;width:100%"> \
-                  <div style="text-align:center;height:100%;width:39%;margin-left:1%;line-height:45px;;white-space: nowrap;overflow:hidden;"> > ' + parseFloat((x_interval * i).toFixed(x_rdinterval)) + '</div> \
-                  <div style="background-color:' + getColor(i * 10) + ';height:100%;width:14%;margin-left:43%;margin-top:-45px"></div> \
-                  <div style="text-align:center;height:100%;width:39%;margin-left:60%;margin-top:-45px;line-height:45px;white-space: nowrap;overflow:hidden;"> > ' + parseFloat((y_interval * i).toFixed(y_rdinterval)) + '</div> \
-                  </div>');
+                  <div style="text-align:center;height:100%;width:39%;margin-left:1%;line-height:45px;;white-space: nowrap;overflow:hidden;"> > ' + parseFloat(((planes["min"][x_feat] + (x_interval * i)) * 100).toFixed(x_rdinterval)).toString().replace(/^[0]+/, "") + '%</div>');
+                if (y_feat == 2 || y_feat == 6){
+                  y_piece = '<div style="background-color:' + getColor(i * 11) + ';height:100%;width:14%;margin-left:43%;margin-top:-45px"></div> \
+                  <div style="text-align:center;height:100%;width:39%;margin-left:60%;margin-top:-45px;line-height:45px;white-space: nowrap;overflow:hidden;"> > $' + parseFloat((planes2["min"][y_feat] + (y_interval * i)).toFixed(y_rdinterval)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '</div> \
+                  </div>'
+                }else{
+                  y_piece = '<div style="background-color:' + getColor(i * 11) + ';height:100%;width:14%;margin-left:43%;margin-top:-45px"></div> \
+                  <div style="text-align:center;height:100%;width:39%;margin-left:60%;margin-top:-45px;line-height:45px;white-space: nowrap;overflow:hidden;"> > ' + parseFloat((planes2["min"][y_feat] + (y_interval * i)).toFixed(y_rdinterval)).toString() + '%</div> \
+                  </div>'
+                }
+                labels = labels + y_piece;
             }
           }
-   
+
         div.innerHTML = labels;
-        
+
         scaleDiv = document.getElementById("scale");
         while (scaleDiv.firstChild) {
           scaleDiv.removeChild(scaleDiv.firstChild);
         }
         scaleDiv.append(div);
       }
-      
+
 
     //////////////////////////////////////////////
     //      MAKE A CORRELATION GRAPHIC          //
@@ -430,29 +449,29 @@
       if (if_destroy === true){
         chart.destroy();
       }
-      
+
       // find feature present in each dropdown
-      feat1 = $('#select option:selected').index();
-      feat2 = $('#select2 option:selected').index();
-      feat1_name = $('#select option:selected').val();
-      feat2_name = $('#select2 option:selected').val();
+      feat1 = $('#select2 option:selected').index();
+      feat2 = $('#select option:selected').index();
+      feat1_name = $('#select2 option:selected').val();
+      feat2_name = $('#select option:selected').val();
 
       // find data from datasets that is requested by each dropdown
       y_vals = []
       x_vals = []
       name_lookup = {};
-      for (var key in planes) {
-        if (planes.hasOwnProperty(key)) {
+      for (var key in planes2) {
+        if (planes2.hasOwnProperty(key)) {
             if (key != "max" && key != "min"){
-              x_vals.push(planes[key][feat1]);
-              name_lookup[planes2[key][feat2]] = key;
+              x_vals.push(planes2[key][feat1]);
             }
         }
       }
-      for (var key in planes2) {
+      for (var key in planes) {
         if (planes.hasOwnProperty(key)) {
             if (key != "max" && key != "min"){
-              y_vals.push(planes2[key][feat2]);
+              y_vals.push(planes[key][feat2]);
+              name_lookup[planes[key][feat2]] = key;
             }
         }
       }
@@ -477,7 +496,7 @@
       data: {
         xs: {
           ZIPCode_y: 'ZIPCode_x',
-            reg_y: 'reg_x'
+          reg_y: 'reg_x'
         },
         colors: {
            ZIPCode_y: 'blue',
@@ -500,14 +519,14 @@
               reg_y : 'spline'
         },
         onclick: function(data) {
-          // when the graphic is clicked 
+          // when the graphic is clicked
 
           // we only want to respond if a scatter point is clicked
           if (data.name != "reg y"){
 
             if (d3.select(d3.selectAll("circle")[0][data.index]).style("fill") == 'rgb(255, 0, 0)'){
               // if point is already selected and you click it again
-              
+
 
               // reset all scatter points to default size and color
               for (i = 0;i < d3.selectAll("circle")[0].length;i++){
@@ -517,8 +536,9 @@
                 map.closePopup();
                 map2.closePopup();
               }
+              d3.select('.c3-tooltip-container').style('display', 'none');
             }else{
-              // if no point or another point is selected 
+              // if no point or another point is selected
 
               // if point is already selected and you click it again
 
@@ -535,7 +555,7 @@
               // edit color in scatter popup
               $("#tooltip-color-1").css("background-color", "red");
               $("#tooltip-color-2").css("background-color", "red");
-              
+
               // open popups in the maps that corespond with the selected point in the scatter plot
               this_zip = name_lookup[data.value];
               map.eachLayer(function(layer2){
@@ -554,7 +574,7 @@
               });
             }
           }
-          
+
         }
       },
       point: {
@@ -570,12 +590,12 @@
             label: feat1_name,
             tick: {
                 fit: false,
-                format: function (x) { 
+                format: function (x) {
                   // round x tick marks based off of the size of the data to show
                   // we do this by calculating an interval (range/10)
                   rdinterval = 0;
-                  feat = $('#select option:selected').index()
-                  interval = ((planes["max"][feat] - planes["min"][feat])/10)
+                  feat = $('#select2 option:selected').index()
+                  interval = ((planes2["max"][feat] - planes2["min"][feat])/10)
                   if (interval < 1){
                     rdinterval = 1;
                   }
@@ -590,11 +610,15 @@
                   }
                   if (interval < .0001){
                     rdinterval = 5;
-                  }    
+                  }
                   if (interval < .00001){
                     rdinterval = 6;
                   }
-                  this_val = parseFloat((x).toFixed(rdinterval))
+                  if (feat == 2 || feat == 6){
+                    this_val = "$" + parseFloat((x).toFixed(rdinterval)).toString().replace(/^[0]+/, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                  }else{
+                    this_val = parseFloat((x).toFixed(rdinterval)).toString().replace(/^[0]+/, "") + "%";
+                  }
                   return this_val
               }
             }
@@ -606,27 +630,27 @@
                 // round x tick marks based off of the size of the data to show
                 // we do this by calculating an interval (range/10)
                 rdinterval = 0;
-                feat = $('#select2 option:selected').index()
-                interval = ((planes2["max"][feat] - planes2["min"][feat])/10)
+                feat = $('#select option:selected').index()
+                interval = ((planes["max"][feat] - planes["min"][feat])/10)
                 if (interval < 1){
                   rdinterval = 1;
                 }
                 if (interval < .1){
-                  rdinterval = 2;
+                  rdinterval = 1;
                 }
                 if (interval < .01){
-                  rdinterval = 3;
+                  rdinterval = 1;
                 }
                 if (interval < .001){
-                  rdinterval = 4;
+                  rdinterval = 2;
                 }
                 if (interval < .0001){
-                  rdinterval = 5;
-                }    
-                if (interval < .00001){
-                  rdinterval = 6;
+                  rdinterval = 3;
                 }
-                this_val = parseFloat((x).toFixed(rdinterval))
+                if (interval < .00001){
+                  rdinterval = 4;
+                }
+                this_val = parseFloat((x * 100).toFixed(rdinterval)).toString().replace(/^[0]+/, "") + "%";
                 return this_val
               }
            }
@@ -641,8 +665,8 @@
                 data = d[0]
                 color = d3.select(d3.selectAll("circle")[0][data.index]).style("fill")
                 x_rdinterval = 0;
-                x_feat = $('#select option:selected').index()
-                x_interval = ((planes["max"][x_feat] - planes["min"][x_feat])/10)
+                x_feat = $('#select2 option:selected').index()
+                x_interval = ((planes2["max"][x_feat] - planes2["min"][x_feat])/10)
                 if (x_interval < 1){
                   x_rdinterval = 1;
                 }
@@ -657,46 +681,50 @@
                 }
                 if (x_interval < .0001){
                   x_rdinterval = 5;
-                }    
+                }
                 if (x_interval < .00001){
                   x_rdinterval = 6;
                 }
                 y_rdinterval = 0;
-                y_feat = $('#select2 option:selected').index()
-                y_interval = ((planes2["max"][y_feat] - planes2["min"][y_feat])/10)
+                y_feat = $('#select option:selected').index()
+                y_interval = ((planes["max"][y_feat] - planes["min"][y_feat])/10)
                 if (y_interval < 1){
                   y_rdinterval = 1;
                 }
                 if (y_interval < .1){
-                  y_rdinterval = 2;
+                  y_rdinterval = 1;
                 }
                 if (y_interval < .01){
-                  y_rdinterval = 3;
+                  y_rdinterval = 1;
                 }
                 if (y_interval < .001){
-                  y_rdinterval = 4;
+                  y_rdinterval = 2;
                 }
                 if (y_interval < .0001){
-                  y_rdinterval = 5;
-                }    
+                  y_rdinterval = 3;
+                }
                 if (y_interval < .00001){
-                  y_rdinterval = 6;
+                  y_rdinterval = 4;
                 }
                 // make tooltip contents
                 full = '<div class="c3-tooltip-container"><table class="c3-tooltip"> \
                           <tbody><tr><th colspan="2">' + name_lookup[data.value] + '</th></tr> \
                           <tr class="c3-tooltip-name--ZIPCode-y"><td class="name"> \
                           <span id = "tooltip-color-1" style="background-color:' + color +'"> \
-                          </span>' + feat1_name + '</td> \
-                          <td class="value">' + parseFloat((data.x).toFixed(x_rdinterval)) + '</td></tr> \
-                          <tr class="c3-tooltip-name--ZIPCode-y"><td class="name"> \
+                          </span>' + feat1_name + '</td>';
+                if (x_feat == 2 || x_feat == 6){
+                  full = full + '<td class="value">' + '$' + parseFloat((data.x).toFixed(x_rdinterval)).toString().replace(/^[0]+/, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '</td></tr>';
+                }else{
+                  full = full + '<td class="value">' + parseFloat((data.x).toFixed(x_rdinterval)).toString().replace(/^[0]+/, "") + '%</td></tr>';
+                }
+                full = full + '<tr class="c3-tooltip-name--ZIPCode-y"><td class="name"> \
                           <span id = "tooltip-color-2" style="background-color:' + color +'"> \
                           </span>' + feat2_name + '</td> \
-                          <td class="value">' + parseFloat((data.value).toFixed(y_rdinterval)) + '</td></tr> \
+                          <td class="value">' + (parseFloat((data.value * 100).toFixed(y_rdinterval))).toString().replace(/^[0]+/, "") + "%" + '</td></tr> \
                           </tbody></table></div>';
                 return full;
               }
-              
+
           },
           position: function () {
             var position = c3.chart.internal.fn.tooltipPosition.apply(this, arguments);
@@ -724,21 +752,21 @@
           rdinterval = 1;
         }
         if (interval < .1){
-          rdinterval = 2;
+          rdinterval = 1;
         }
         if (interval < .01){
-          rdinterval = 3;
+          rdinterval = 1;
         }
         if (interval < .001){
-          rdinterval = 4;
+          rdinterval = 2;
         }
         if (interval < .0001){
-          rdinterval = 5;
-        }    
-        if (interval < .00001){
-          rdinterval = 6;
+          rdinterval = 3;
         }
-        layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br> ZIP: " + feature.properties.ZIPCODE1 + " <br>" + $('#select option:selected').val() + ": " + parseFloat((planes[feature.properties.ZIPCODE1][feat]).toFixed(rdinterval)) + " </p>");
+        if (interval < .00001){
+          rdinterval = 4;
+        }
+        layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br> ZIP: " + feature.properties.ZIPCODE1 + " <br>" + $('#select option:selected').val() + ": " + parseFloat((planes[feature.properties.ZIPCODE1][feat] * 100).toFixed(rdinterval)).toString().replace(/^[0]+/, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "%</p>");
         val = 100 * (planes[feature.properties.ZIPCODE1][feat] - planes["min"][feat])/(planes["max"][feat] - planes["min"][feat])
         layer.setStyle({fillColor : getColor(val)})
         layer.setStyle({fillOpacity: 1})
@@ -748,7 +776,7 @@
       }else{
         if (feature.properties.ZIPCODE1 == 21251){
             layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br>" + feature.properties.ZIPCODE1 + "<br>  Morgan State University <br> No data</p>");
-        }else if (feature.properties.ZIPCODE1 == 21205){
+        }else if (feature.properties.ZIPCODE1 == 21287){
             layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br>" + feature.properties.ZIPCODE1 + "<br>  Johns Hopkins University <br> No data</p>");
         }
         layer.setStyle({fillColor : '#FFFFFF'})
@@ -757,11 +785,12 @@
         layer.setStyle({weight:2})
       }
 
-      // when the first map is clicked 
+      // when the first map is clicked
       layer.on({
         click: function(){
+          if (feature.properties.ZIPCODE1 in planes){
             feat = $('#select option:selected').index()
-            
+
             this_feat = planes[feature.properties.ZIPCODE1][feat];
             not_set = true;
             this_index = 0;
@@ -783,9 +812,8 @@
                 }
               }
             }
-   
-            // if point is already selected do nothing
-            // if not run
+
+            // if point is not already selected
             if (d3.select(our_list[this_index]).style("fill") == 'rgb(0, 0, 255)'){
               resetAllPoints();
               d3.select(our_list[this_index]).style("fill", "red")
@@ -801,8 +829,27 @@
 
               // select the coresponding popup in the other map and make it shown
               chart.tooltip.show({data: {x: our_list[this_index]["__data__"].x, id: our_list[this_index]["__data__"].id, value: our_list[this_index]["__data__"].value}});
+            }else{
+                // if point is already selected, deselect zip in all graphics
+                resetAllPoints();
+                map.closePopup();
+                map2.closePopup();
+                d3.select('.c3-tooltip-container').style('display', 'none');
             }
+          }else{
+            // if this is one of the points that doesnt have data
+            map2.eachLayer(function(layer2){
+                if (layer2.hasOwnProperty('feature') ) {
+                  if (layer2.feature.properties.ZIPCODE1 == layer.feature.properties.ZIPCODE1){
+                    layer2.openPopup()
+                  }
+                }
+              });
+            layer.openPopup()
+            resetAllPoints();
+            d3.select('.c3-tooltip-container').style('display', 'none');
           }
+        }
       });
     }
 
@@ -827,11 +874,15 @@
         }
         if (interval < .0001){
           rdinterval = 5;
-        }    
+        }
         if (interval < .00001){
           rdinterval = 6;
         }
-        layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br> ZIP: " + feature.properties.ZIPCODE1 + " <br>" + $('#select2 option:selected').val() + ": " + parseFloat((planes2[feature.properties.ZIPCODE1][feat]).toFixed(rdinterval)) + " </p>");
+        if (feat == 2 || feat == 6){
+          layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br> ZIP: " + feature.properties.ZIPCODE1 + " <br>" + $('#select2 option:selected').val() + ": $" + parseFloat((planes2[feature.properties.ZIPCODE1][feat]).toFixed(rdinterval)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</p>");
+        }else{
+          layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br> ZIP: " + feature.properties.ZIPCODE1 + " <br>" + $('#select2 option:selected').val() + ": " + parseFloat((planes2[feature.properties.ZIPCODE1][feat]).toFixed(rdinterval)) + "%</p>");
+        }
         val = 100 * (planes2[feature.properties.ZIPCODE1][feat] - planes2["min"][feat])/(planes2["max"][feat] - planes2["min"][feat])
         layer.setStyle({fillColor : getColor(val)})
         layer.setStyle({fillOpacity: 1})
@@ -840,7 +891,7 @@
       }else{
         if (feature.properties.ZIPCODE1 == 21251){
             layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br>" + feature.properties.ZIPCODE1 + "<br>  Morgan State University <br> No data</p>");
-        }else if (feature.properties.ZIPCODE1 == 21205){
+        }else if (feature.properties.ZIPCODE1 == 21287){
             layer.bindPopup("<p style = \"text-align:center;\"> " + feature.properties.ZIPNAME + " <br>" + feature.properties.ZIPCODE1 + "<br>  Johns Hopkins University <br> No data</p>");
         }
         layer.setStyle({fillColor : '#FFFFFF'})
@@ -849,58 +900,78 @@
         layer.setStyle({weight:2})
       }
 
-      // when the second map is clicked 
+      // when the second map is clicked
       layer.on({
         click: function(e){
 
-          feat = $('#select2 option:selected').index()
-          this_feat = planes2[feature.properties.ZIPCODE1][feat];
-          not_set = true;
-          this_index = 0;
-          our_list = d3.selectAll("circle")[0]
-          while(our_list == 'undefined' & (our_list.length > 1)){
+          // if this is not one of the two areas with no data
+          if (feature.properties.ZIPCODE1 in planes2){
+            feat = $('#select2 option:selected').index()
+            this_feat = planes2[feature.properties.ZIPCODE1][feat];
+            not_set = true;
+            this_index = 0;
             our_list = d3.selectAll("circle")[0]
-          };
-          for (i = 0;i < our_list.length;i++){
-            if ((this_feat === our_list[i]["__data__"]['value']) & (d3.selectAll("circle")[0][i]["__data__"]["id"] === "ZIPCode_y")){
-              this_index = i;
-              not_set = false;
-            }
-          }
-          if (not_set){
+            while(our_list == 'undefined' & (our_list.length > 1)){
+              our_list = d3.selectAll("circle")[0]
+            };
             for (i = 0;i < our_list.length;i++){
-              if ((this_feat === our_list[i]["__data__"]['x']) & (d3.selectAll("circle")[0][i]["__data__"]["id"] === "ZIPCode_y")){
+              if ((this_feat === our_list[i]["__data__"]['value']) & (d3.selectAll("circle")[0][i]["__data__"]["id"] === "ZIPCode_y")){
                 this_index = i;
                 not_set = false;
               }
             }
-          }
-
-          // if point is already selected do nothing
-          // if not run
-          if (d3.select(our_list[this_index]).style("fill") == 'rgb(0, 0, 255)'){
-
-            resetAllPoints();
-            d3.select(our_list[this_index]).style("fill", "red")
-            d3.select(our_list[this_index]).style("r", 10)
-
-            map.eachLayer(function(layer2){
-              if (layer2.hasOwnProperty('feature') ) {
-                if (layer2.feature.properties.ZIPCODE1 == layer.feature.properties.ZIPCODE1){
-                  layer2.openPopup()
+            if (not_set){
+              for (i = 0;i < our_list.length;i++){
+                if ((this_feat === our_list[i]["__data__"]['x']) & (d3.selectAll("circle")[0][i]["__data__"]["id"] === "ZIPCode_y")){
+                  this_index = i;
+                  not_set = false;
                 }
               }
-            });
-            layer.openPopup()
+            }
 
-            // select the coresponding popup in the other map and make it shown
-            chart.tooltip.show({data: {x: d3.selectAll("circle")[0][this_index]["__data__"].x, id: d3.selectAll("circle")[0][this_index]["__data__"].id, value: d3.selectAll("circle")[0][this_index]["__data__"].value}});
+            // if point is not already selected
+            if (d3.select(our_list[this_index]).style("fill") == 'rgb(0, 0, 255)'){
+
+              resetAllPoints();
+              d3.select(our_list[this_index]).style("fill", "red")
+              d3.select(our_list[this_index]).style("r", 10)
+
+              map.eachLayer(function(layer2){
+                if (layer2.hasOwnProperty('feature') ) {
+                  if (layer2.feature.properties.ZIPCODE1 == layer.feature.properties.ZIPCODE1){
+                    layer2.openPopup()
+                  }
+                }
+              });
+              layer.openPopup()
+
+              // select the coresponding popup in the other map and make it shown
+              chart.tooltip.show({data: {x: d3.selectAll("circle")[0][this_index]["__data__"].x, id: d3.selectAll("circle")[0][this_index]["__data__"].id, value: d3.selectAll("circle")[0][this_index]["__data__"].value}});
+            }else{
+                // if point is already selected, deselect zip in all graphics
+                resetAllPoints();
+                map.closePopup();
+                map2.closePopup();
+                d3.select('.c3-tooltip-container').style('display', 'none');
+            }
+          }else{
+            // if this is one of the points that doesnt have data
+            map.eachLayer(function(layer2){
+                if (layer2.hasOwnProperty('feature') ) {
+                  if (layer2.feature.properties.ZIPCODE1 == layer.feature.properties.ZIPCODE1){
+                    layer2.openPopup()
+                  }
+                }
+              });
+            layer.openPopup()
+            resetAllPoints();
+            d3.select('.c3-tooltip-container').style('display', 'none');
           }
         }
-
       });
     }
 
+    // make all points in the scatter normal sized and blue
     function resetAllPoints(){
 
       // reset all scatter plots to blue
@@ -921,10 +992,10 @@
 
 
       geojsonLayer = new L.GeoJSON.AJAX("ZIP_Codes.geojson", {onEachFeature: myOnEachFeature
-        
+
       },{style: style});
       geojsonLayer.addTo(map);
-      
+
       generateMap(true)
       makeLegend();
       makeNewLabel()
@@ -932,28 +1003,32 @@
       resetAllPoints();
       map.closePopup();
       map2.closePopup();
+      map.setView([39.3, -76.62], 11);
+      map2.setView([39.3, -76.62], 11);
     });
 
     $('#select2').change(function(){
-      map2.removeLayer(geojsonLayer2); 
+      map2.removeLayer(geojsonLayer2);
 
       feat = $('#select2 option:selected').index()
       geojsonLayer2 = new L.GeoJSON.AJAX("ZIP_Codes.geojson", {onEachFeature: myOnEachFeature2
-        
+
     },{style: style});
       geojsonLayer2.addTo(map2);
 
       generateMap(true)
       makeLegend();
       makeNewLabel()
-      
+
       resetAllPoints();
       map.closePopup();
       map2.closePopup();
+      map.setView([39.3, -76.62], 11);
+      map2.setView([39.3, -76.62], 11);
     });
 
 
-    
+
     var name_lookup = {};
     generateMap(false);
     makeLegend();
