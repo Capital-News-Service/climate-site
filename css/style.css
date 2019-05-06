@@ -595,7 +595,7 @@ h3 {
 #slider-graphic-container .title {
  text-transform:uppercase;
  font-weight:bold;
- font-size:2em;
+ font-size:1.5em;
  color: #94b8e0;
 }
 
@@ -653,6 +653,28 @@ h3 {
  }
 
 
+ @media (max-width:500px) {
+
+   #slider-graphic-container .title {
+    font-size:1em;
+   }
+
+   #slider-graphic-container .title-intro {
+    font-size:1 em;
+   }
+
+   #slider-graphic-container .title-intro {
+    font-size:1 em;
+   }
+
+
+   #slider-graphic-container {
+     height: 475px;
+   }
+
+
+
+}
 
 
 
