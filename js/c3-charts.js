@@ -366,7 +366,7 @@ hide: 'data1'
 
   names: {
       data1: 'City of Baltimore',
-      data2: 'All of Maryland'
+      data2: 'Maryland'
 
   },
 
