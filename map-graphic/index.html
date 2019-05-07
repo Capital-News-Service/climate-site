@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CNS Opioid Map</title>
+  <title>Bitter Cold: How health conditions relate to race, income, poverty and housing in Baltimore</title>
 
 
    <!-- d3 import -->
@@ -42,17 +42,27 @@
 
   <!-- load our custom js -->
   <script src="js/helper-functions.js"></script>
-  <!-- font -->
-  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Poppins:300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+
 
   <!-- for style other than leaflet -->
   <style type="text/css">
   body {
-    font-family: 'Droid Serif', serif;
+    font-family:'Montserrat', sans-serif;
     font-size: .9em;
+    background-color:#181818;
+  }
+  #tophat {
+    width:100%;
+    color:#000;
+    height:40px;
+    border-bottom:1px solid #fff;
   }
     svg {
-      font-family:'Poppins', sans-serif;
+      font-family:'Montserrat', sans-serif;
       font-size:9pt;
       shape-rendering: crispEdges;
     }
@@ -105,7 +115,7 @@
     .tooltip_stats {
         padding: 6px 8px;
         font-size:9pt;
-        font-family:'Poppins', sans-serif;
+        font-family:'Montserrat', sans-serif;
         background: white;
         background: rgba(255,255,255,0.9);
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -118,6 +128,7 @@
       border-right-color: black;
     }
     h1 {
+      font-family:'Montserrat', sans-serif;
       font-weight:600;
       font-size:24pt;
       fill:#2c2c2c;
@@ -127,23 +138,26 @@
       text-align:center;
     }
     h2 {
-      font-weight:200;
-      font-size:11pt;
-      fill:#2c2c2c;
-      color:white;
+      font-family:'Montserrat', sans-serif;
+      font-weight:300;
+      font-size:12pt;
+      color:#94B8E0;
       margin-bottom:5px;
       margin-top:10px;
       text-align: justify;
-
+      line-height:150%;
     }
+
     h3 {
-      font-family:'Poppins', sans-serif;
+      font-family:'Montserrat', sans-serif;
       font-weight:300;
       font-size:8pt;
       color:white;
       text-transform: uppercase;
       text-align:center;
+      padding-top:10px;
     }
+
     h4 {
       font-weight:400;
       font-size:9pt;
@@ -159,6 +173,18 @@
       text-align:left;
       text-align:center;
     }
+
+    .titletext {
+      color:#fff;
+      padding-left:50px;
+      font-weight:700;
+      padding-top:10px;
+    }
+
+    .titletext a {
+      color:#fff;
+    }
+
     .legend {
     line-height: 18px;
     color: #555;
@@ -168,16 +194,18 @@
      color: #555;
      padding: 8px 8px;
      font-size:10pt;
-     font-family:'Droid Serif', sans-serif;
+     font-family:'PT Serif', sans-serif;
      background: white;
      box-shadow: 0 0 15px rgba(0,0,0,0.2);
      border-radius: 5px;
      text-align:center;
     }
+
+
     .info {
         padding: 6px 8px;
         font-size:9pt;
-        font-family:'Droid Serif', sans-serif;
+        font-family:'PT Serif', sans-serif;
         background: white;
         background: rgba(255,255,255,0.8);
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -197,22 +225,15 @@
     /*Styles the div that holds the highchart */
     #container {
       margin: 0 auto;
-      padding-left:20px;
-      padding-top:20px;
-      padding-right:30px;
-      padding-bottom:10px;
-      border-left:1px solid black;
-      border-bottom:14pt solid black;
-      border-top:1px solid black;
-      border-right:1px solid black;
-      box-shadow:5px 5px 10px gainsboro;
       min-width: 310px;
       max-width: 1000px;
       position:relative;
       background-color:#181818;
+      padding-bottom:100px;
+      padding-top:50px;
     }
     #source{
-      font-family: 'Poppins', serif;
+      font-family: 'Montserrat', serif;
       font-size:.8em;
       text-align: right;
       margin-top:10px;
@@ -233,6 +254,13 @@
   </style>
 </head>
 <body>
+
+<div id="tophat">
+
+  <div class="titletext"><a href="https://cnsmaryland.org/interactives/spring-2019/bitter-cold/">BITTER COLD : CLIMATE CHANGE, PUBLIC HEALTH AND BALTIMORE</a></div>
+
+</div>
+
   <div id="container" style="min-width: 300px; max-width: 1200px; display: flex;flex-direction: column; margin: 0 auto">
     <h1>How health conditions relate to race, income, poverty and housing in Baltimore</h1>
     <h3>By Jake Gluck | <a href="http://cnsmaryland.org" target="_blank" style="color:#94B8E0">Capital News Service</a></h3>
