@@ -178,7 +178,10 @@ BODY {
 }
 
 
+.shadows {
+  text-shadow: 3px 3px 10px black;
 
+}
 
 
 /* LINK STYLES */
