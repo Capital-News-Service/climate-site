@@ -210,6 +210,9 @@ a:link.toc-link {color:#000;}
 
 a:visited.toc-link {color:#000;}
 
+.big-link {font-size:1.5em;font-weight:700;}
+
+.graphic-subhead {font-size:2em;font-weight:700;color:#fff;text-align:center;}
 
 
 /* IMAGES */
@@ -352,7 +355,7 @@ p{
 
 .intro-text {
   font-family: 'Montserrat', sans-serif;
-  font-size:1.4em;
+  font-size:1.6em;
   width: 100%;
   padding-bottom:25px;
   padding-top:25px;
@@ -360,7 +363,7 @@ p{
 
 .intro-text-splash {
   font-family: 'Montserrat', sans-serif;
-  font-size:1.4em;
+  font-size:1.6em;
   width: 100%;
   padding-top:25px;
   padding-bottom:25px;
@@ -656,6 +659,16 @@ h3 {
  }
 
 
+
+ @media (max-width:600px) {
+
+   .hide600 {
+      display:none;
+   }
+
+}
+
+
  @media (max-width:500px) {
 
    #slider-graphic-container .title {
@@ -744,6 +757,7 @@ h3 {
   .hero-text {
     font-size:2em;
     line-height:120%;
+    text-shadow: 3px 3px 10px black;
   }
 
   .top-head {
