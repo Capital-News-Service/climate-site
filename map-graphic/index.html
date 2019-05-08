@@ -428,6 +428,9 @@
 
       function makeNewLabel(){
         x_feat = $('#select1 option:selected').val().toLowerCase();
+        if (x_feat === "copd prevalence"){
+          x_feat = "COPD prevalance";
+        }
         y_feat = $('#select2 option:selected').val().toLowerCase();
         newLabel = '<p class="col-12" style="font-size:1.55em;color:white;">How <span style="color:#94B8E0;">' + x_feat +'</span> correlates with <span style="color:#94B8E0;">' + y_feat +'</span></p>'
         document.getElementById("graphic-text").innerHTML = newLabel;
