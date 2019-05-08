@@ -47,6 +47,7 @@ hide: 'data1'
 
 // Climate story
 // Cold Snap
+// Joe HaeMee Edit 
 var chart = c3.generate({
     bindto: '#coldsnap',
     data: {
@@ -73,10 +74,10 @@ var chart = c3.generate({
         },
           //ADD COMMA AND DOLLAR SIGN TO Y AXIS
         axis : {
-        y : {
+        x : {
             tick: {
 
-//                format: function (d) { return "$" + d; }
+                format: function (d) { return d + "s"; }
             }
         }
     },
@@ -97,6 +98,7 @@ hide: 'data1'
 
 // Climate story
 // Freeze 32
+// Joe HaeMee edit 
 var chart = c3.generate({
   bindto: '#chart-freeze-32',
     data: {
@@ -121,10 +123,10 @@ var chart = c3.generate({
         },
           //ADD COMMA AND DOLLAR SIGN TO Y AXIS
         axis : {
-        y : {
+        x : {
             tick: {
 
-//                format: function (d) { return "$" + d; }
+                format: function (d) { return d + "s"; }
             }
         }
     },
@@ -145,6 +147,7 @@ hide: 'data1'
 
 // Climate story
 // 20-10-compare
+// Joe HaeMee edit
 var chart = c3.generate({
   bindto: '#chart-20-10-compare',
     data: {
@@ -173,10 +176,10 @@ var chart = c3.generate({
         },
           //ADD COMMA AND DOLLAR SIGN TO Y AXIS
         axis : {
-        y : {
+        x : {
             tick: {
 
-//                format: function (d) { return "$" + d; }
+               format: function (d) { return d + "s"; }
             }
         }
     },
